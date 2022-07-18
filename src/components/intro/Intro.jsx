@@ -6,34 +6,44 @@ import './intro.css';
 
 const Intro = () => {
   return (
-    <section id="about">
+    <section id='about'>
       <h5>Get to know</h5>
       <h2>About Me</h2>
-      <div className="container about__container">
-        <div className="about__me">
-          <div className="about__me-image">
-            <img src={ME} alt="me" />
+      <div className='container about__container'>
+        <div className='about__me'>
+          <div className='about__me-image'>
+            <img src={ME} alt='me' />
           </div>
         </div>
-        <div className="about__content">
-          <div className="about__cards">
-            <article className="about__card">
-              <FaAward className="about__icon" />
+        <div className='about__content'>
+          <div className='about__cards'>
+            <article className='about__card'>
+              <FaAward className='about__icon' />
               <h5>Experience</h5>
-              <small>1 year</small>
+              <small>&lt; 1 years</small>
             </article>
-            <article className="about__card">
-              <VscFolderLibrary className="about__icon" />
+            <article className='about__card'>
+              <VscFolderLibrary className='about__icon' />
               <h5>Projects</h5>
-              <small>20+ Completed Projects</small>
+              <small>5 Completed Projects</small>
             </article>
           </div>
-          <p>I’ve spent the last several months in a remote environment, working with HTML, CSS, JavaScript, building everything from landing pages to APIs. My experience as a teacher in an international school helped me collaborate with fellow developers from all over the world. Additionally, working with kids isn’t an easy task, however, it has helped me become efficient, productive, and fast even in a very stressful environment, which is an important skill in the tech industry.</p>
-          <a href="#contact" className="btn btn-primary">Let's Talk</a>
+          <p>
+            I am Dhawal.
+            <br /> I solve problems, by learning as deeply about something
+            needed to solve that problem. <br />I pride on my work, which
+            instills an optimal ।amount of watchfulness in every piece of
+            software that I code. <br />I may lack experience, but I more than
+            make up for it with my hunger for knowledge, as showcased by my
+            projects, wherein I imbibe my learned skills.
+          </p>
+          <a href='#contact' className='btn btn-primary'>
+            Let's Talk
+          </a>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Intro
+export default Intro;

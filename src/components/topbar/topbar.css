@@ -11,7 +11,7 @@ nav {
   display: flex;
   gap: 0.8rem;
   border-radius: 3rem;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(7px);
 }
 
 nav a {

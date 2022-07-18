@@ -1,22 +1,22 @@
 # Personal-Portfolio
+
 > This is personal portfolio website.
 
-![Portfolio](https://raw.github.com/Meri-MG/portfolio---react/master/src/assets/port.png)
+![Portfolio](https://raw.github.com/dhawal-pandya/portfolio/master/src/assets/portfolio.png)
 
 ## Built With
 
 - React
 - CSS
-- VS code
+- VS Code
 
-## Live Demo
+## Deployment
 
-- [Live Demo](https://chic-biscochitos-af5267.netlify.app/)
-
+- [View Deployment](https://dhawal-pandya.github.io/Portfolio/)
 
 # Getting Started
-## Prerequisites:
 
+## Prerequisites:
 
 - Create an account on github
 
@@ -28,36 +28,34 @@
 
 - Choose a folder in your local machine where you want this repository to be copied
 
-- Clone this [repository](https://github.com/Meri-MG/portfolio---react) to your local machine 
+- Clone this [repository](https://github.com/dhawal-pandya/Portfolio) to your local machine
 - ```
-  git clone git@github.com:Meri-MG/portfolio---react.git
+  git clone git@github.com:dhawal-pandya/portfolio---react.git
   ```
 
-- Navigate to `cd portfolio---react`  directory.
+- Navigate to `cd portfolio` directory.
 
 - To install all the app dependencies on the command line run
 - ```
   npm install
-  ``` 
-- To run app in the development mode run 
+  ```
+- To run app in the development mode run
 - ```
   npm start
   ```
 
-
 ## Author
 
-:woman: **Meri Gogichashvili**
+**Dhawal Pandya**
 
-- [GitHub](https://github.com/Meri-MG)
-- [LinkedIn](https://www.linkedin.com/in/meri-gogichashvili/)
-
-## 🤝 Contributing
-- Contributions, issues, and feature requests are welcome!
-- Feel free to check the [issues page](https://github.com/Meri-MG/portfolio---react/issues).
+- [GitHub](https://github.com/dhawal-pandya)
+- [LinkedIn](https://www.linkedin.com/in/dhawal-pandya/)
 
 # Show your support
+
 Give a ⭐ if you like this project!
 
 # Acknowledgments
+
 Thanks to [EGATOR](https://www.youtube.com/watch?v=G-Cr00UYokU&list=WL&index=55&t=1845s) tutotial!
+Also thanks to [Meri Gogichashvili](https://github.com/Meri-MG/)
