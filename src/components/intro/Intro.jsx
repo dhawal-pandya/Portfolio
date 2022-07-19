@@ -17,11 +17,11 @@ const Intro = () => {
         </div>
         <div className='about__content'>
           <div className='about__cards'>
-            <article className='about__card'>
+            {/* <article className='about__card'>
               <FaAward className='about__icon' />
-              <h5>Experience</h5>
-              <small>&lt; 1 years</small>
-            </article>
+              <h5>Certificates</h5>
+              <small></small>
+            </article> */}
             <article className='about__card'>
               <VscFolderLibrary className='about__icon' />
               <h5>Projects</h5>

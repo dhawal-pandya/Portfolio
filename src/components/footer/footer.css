@@ -1,5 +1,6 @@
 footer {
-  background: var(--color-primary);
+  /* background: var(--color-primary); */
+  background: linear-gradient(to bottom, var(--color-primary), #2c2c6c97);
   padding: 3rem 0;
   text-align: center;
   font-size: 0.9rem;
