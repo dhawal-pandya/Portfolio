@@ -1,7 +1,6 @@
 footer {
   /* background: var(--color-primary); */
   background: linear-gradient(to bottom, var(--color-primary), #2c2c6c97);
-  padding: 3rem 0;
   text-align: center;
   font-size: 0.9rem;
   margin-top: 7rem;
@@ -15,6 +14,7 @@ footer a {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 2rem;
+  padding: 1rem;
   display: inline-block;
 }
 
@@ -23,14 +23,14 @@ footer a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2rem;
 }
 
 .footer__socials {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 .footer__socials a {
@@ -49,7 +49,7 @@ footer a {
 }
 
 .msg {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   color: var(--color-bg);
 }
 
@@ -62,4 +62,10 @@ footer a {
   .footer__socials {
     margin-bottom: 2.6rem;
   }
+}
+
+footer > div > img {
+  position: relative;
+  width: 33.33%;
+  left: 33.33%;
 }

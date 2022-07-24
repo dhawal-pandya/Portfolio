@@ -2,6 +2,7 @@ import React from 'react';
 import { BsLinkedin } from 'react-icons/bs';
 import { FaGithub, FaTwitter } from 'react-icons/fa';
 import './footer.css';
+import IMG1 from '../../assets/footer.png';
 
 const Footer = () => {
   return (
@@ -51,6 +52,9 @@ const Footer = () => {
       </div>
       <div className='msg'>
         <small>Made with ❤️ by Dhawal Pandya</small>
+      </div>
+      <div className='footimg'>
+        <img src={IMG1} alt='footerimage' />
       </div>
     </footer>
   );

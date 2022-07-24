@@ -22,11 +22,15 @@ const Intro = () => {
               <h5>Certificates</h5>
               <small></small>
             </article> */}
-            <article className='about__card'>
-              <VscFolderLibrary className='about__icon' />
-              <h5>Projects</h5>
-              <small>5 Completed Projects</small>
-            </article>
+            <div>
+              <a href='#portfolio'>
+                <article className='about__card'>
+                  <VscFolderLibrary className='about__icon' />
+                  <h5>Projects</h5>
+                  <small>5 Completed Projects</small>
+                </article>
+              </a>
+            </div>
           </div>
           <p>
             I am Dhawal.

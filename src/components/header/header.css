@@ -3,6 +3,11 @@ header {
   padding-top: 7rem;
   overflow: hidden;
 }
+/* 
+.top {
+  font-size: 7vh;
+  opacity: 0.7;
+} */
 
 .header__container {
   text-align: center;
@@ -23,7 +28,7 @@ header {
   align-items: center;
   gap: 0.8rem;
   position: absolute;
-  left: 5rem;
+  left: 2rem;
   bottom: 1rem;
 }
 
@@ -36,7 +41,7 @@ header {
 
 .scroll__on {
   position: absolute;
-  right: 5rem;
+  right: 2rem;
   bottom: 5rem;
   transform: rotate(90deg);
   font-weight: 300;
@@ -55,11 +60,11 @@ header {
 
 @media screen and (max-width: 600px) {
   header {
-    height: 100vh;
+    height: 100%;
   }
 
   .header__socials,
-  .scroll__down {
+  .scroll__on {
     display: none;
   }
 }
