@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.38b6a29d.css",
-    "main.js": "/Portfolio/static/js/main.b96b867e.js",
+    "main.css": "/Portfolio/static/css/main.14eaf97f.css",
+    "main.js": "/Portfolio/static/js/main.4c80de1f.js",
     "static/media/springstorm.png": "/Portfolio/static/media/springstorm.396a53b7d82021b2ab3b.png",
     "static/media/me.png": "/Portfolio/static/media/me.5fe94f8c4be5c033d8d0.png",
     "static/media/cv.pdf": "/Portfolio/static/media/cv.2c6ddaaffe3a077ee9c5.pdf",
+    "static/media/footer.png": "/Portfolio/static/media/footer.248e10c08894044d604e.png",
     "static/media/pokedex.png": "/Portfolio/static/media/pokedex.435b7f22f03a30515c34.png",
     "static/media/expensemanager.png": "/Portfolio/static/media/expensemanager.5a4a6011f00d0f44e450.png",
     "static/media/tictactoe.png": "/Portfolio/static/media/tictactoe.cba6b99774d18472fefe.png",
     "static/media/colorrandom.png": "/Portfolio/static/media/colorrandom.e7d37ef2d19978e6408e.png",
     "index.html": "/Portfolio/index.html",
-    "main.38b6a29d.css.map": "/Portfolio/static/css/main.38b6a29d.css.map",
-    "main.b96b867e.js.map": "/Portfolio/static/js/main.b96b867e.js.map"
+    "main.14eaf97f.css.map": "/Portfolio/static/css/main.14eaf97f.css.map",
+    "main.4c80de1f.js.map": "/Portfolio/static/js/main.4c80de1f.js.map"
   },
   "entrypoints": [
-    "static/css/main.38b6a29d.css",
-    "static/js/main.b96b867e.js"
+    "static/css/main.14eaf97f.css",
+    "static/js/main.4c80de1f.js"
   ]
 }
