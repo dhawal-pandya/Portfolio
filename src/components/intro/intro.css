@@ -83,6 +83,7 @@
 
   .about__content p {
     margin: 1rem 0 1.5rem;
+    text-align: center;
   }
 }
 
@@ -103,5 +104,6 @@
 
   .about__content p {
     margin: 1.5rem 0;
+    text-align: center;
   }
 }

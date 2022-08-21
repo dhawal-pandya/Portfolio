@@ -11,11 +11,11 @@
 }
 
 :root {
-  --color-bg: #1f1f38;
+  --color-bg: #18182d;
   --color-bg-variant: #2c2c6c;
-  --color-primary: #4db5ff;
+  --color-primary: #5fb8f8;
+  --color-primary-variant: #4db5ff66;
   /* Here is where to change colors to affect the whole site */
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
   --color-white: #fff;
   --color-light: rgba(255, 255, 255, 0.6);
 
@@ -45,7 +45,6 @@ body {
 
 body::-webkit-scrollbar {
   width: 0.75vw; /* width of the entire scrollbar */
-  /* display: none; */
 }
 
 body::-webkit-scrollbar-track {
@@ -71,14 +70,6 @@ h5,
 h6 {
   font-weight: 500;
 }
-/* 
-h1 {
-  font-size: 3rem;
-}
-
-h5 {
-  font-size: 2rem;
-} */
 
 section {
   margin-top: 8rem;

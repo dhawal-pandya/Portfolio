@@ -36,10 +36,13 @@ const Intro = () => {
             I am Dhawal.
             <br /> I solve problems, by learning as deeply about something
             needed to solve that problem. <br />I pride on my work, which
-            instills an optimal ।amount of watchfulness in every piece of
+            instills an optimal amount of watchfulness in every piece of
             software that I code. <br />I may lack experience, but I more than
-            make up for it with my hunger for knowledge, as showcased by my
-            projects, wherein I imbibe my learned skills.
+            make up for it with my hunger for knowledge. <br />I have got a
+            <a href='https://www.hackerrank.com/dhawalpandya'> Gold Badge </a>
+            from HackerRank for Problem-Solving.
+            <br />
+            Click on the button below to have a conversation with me.
           </p>
           <a href='#contact' className='btn btn-primary'>
             Let's Talk
