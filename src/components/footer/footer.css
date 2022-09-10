@@ -53,6 +53,12 @@ footer a {
   color: var(--color-bg);
 }
 
+footer > div > img {
+  position: relative;
+  width: 33.33%;
+  left: 33.33%;
+}
+
 @media screen and (max-width: 600px) {
   .permalinks {
     flex-direction: column;
@@ -66,6 +72,6 @@ footer a {
 
 footer > div > img {
   position: relative;
-  width: 33.33%;
-  left: 33.33%;
+  width: 70%;
+  left: 15%;
 }

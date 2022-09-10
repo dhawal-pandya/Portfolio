@@ -1,8 +1,8 @@
 import React from 'react';
-import IMG1 from '../../assets/pokedex.png';
-import IMG2 from '../../assets/springstorm.png';
-import IMG3 from '../../assets/expensemanager.png';
-// import IMG4 from '../../assets/portfolio.png';
+import IMG1 from '../../assets/GOL.png';
+import IMG2 from '../../assets/pokedex.png';
+import IMG3 from '../../assets/springstorm.png';
+import IMG4 from '../../assets/expensemanager.png';
 import IMG5 from '../../assets/colorrandom.png';
 import IMG6 from '../../assets/tictactoe.png';
 
@@ -12,32 +12,32 @@ const Portfolio = () => {
   const soloProjects = [
     {
       id: 1,
-      title: 'Pokedex',
+      title: 'Game Of Life',
       img: IMG1,
+      link: 'https://dhawal-pandya.github.io/Game-Of-Life/',
+      github: 'https://github.com/dhawal-pandya/Game-Of-Life',
+    },
+    {
+      id: 2,
+      title: 'Pokedex',
+      img: IMG2,
       link: 'https://dhawal-pandya.github.io/Pokedex/',
       github: 'https://github.com/dhawal-pandya/Pokedex',
     },
     {
-      id: 2,
+      id: 3,
       title: 'SpringStorm',
-      img: IMG2,
+      img: IMG3,
       link: 'https://dhawal-pandya.github.io/SpringStorm/',
       github: 'https://github.com/dhawal-pandya/SpringStorm',
     },
     {
-      id: 3,
+      id: 4,
       title: 'Expense-Manager',
-      img: IMG3,
+      img: IMG4,
       link: 'https://dhawal-pandya.github.io/Expense-Manager/',
       github: 'https://github.com/dhawal-pandya/Expense-Manager',
     },
-    // {
-    //   id: 4,
-    //   title: 'Shelter',
-    // img: IMG3,
-    //   link: 'https://meri-mg.github.io/shelter/pages/main/index.html',
-    //   github: 'https://github.com/Meri-MG/shelter',
-    // },
     {
       id: 5,
       title: 'Color Randomiser',

@@ -27,7 +27,7 @@ const Intro = () => {
                 <article className='about__card'>
                   <VscFolderLibrary className='about__icon' />
                   <h5>Projects</h5>
-                  <small>5 Completed Projects</small>
+                  <small>6 Completed Projects</small>
                 </article>
               </a>
             </div>
@@ -38,7 +38,7 @@ const Intro = () => {
             needed to solve that problem. <br />I pride on my work, which
             instills an optimal amount of watchfulness in every piece of
             software that I code. <br />I may lack experience, but I more than
-            make up for it with my hunger for knowledge. <br />I have got a
+            make up for it with my hunger for knowledge. <br />I have got a 5 ⭐
             <a href='https://www.hackerrank.com/dhawalpandya'> Gold Badge </a>
             from HackerRank for Problem-Solving.
             <br />
