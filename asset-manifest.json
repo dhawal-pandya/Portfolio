@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fadf9c13.css",
+    "main.js": "/static/js/main.a51e583c.js",
+    "static/media/springstorm.png": "/static/media/springstorm.396a53b7d82021b2ab3b.png",
+    "static/media/me.png": "/static/media/me.5fe94f8c4be5c033d8d0.png",
+    "static/media/footer.png": "/static/media/footer.248e10c08894044d604e.png",
+    "static/media/pokedex.png": "/static/media/pokedex.435b7f22f03a30515c34.png",
+    "static/media/sudoku.png": "/static/media/sudoku.603d7904077d425d6406.png",
+    "static/media/tictactoe.png": "/static/media/tictactoe.cba6b99774d18472fefe.png",
+    "static/media/colorrandom.png": "/static/media/colorrandom.e7d37ef2d19978e6408e.png",
+    "static/media/GOL.png": "/static/media/GOL.59c0e501dbf89076d15e.png",
+    "static/media/postit.png": "/static/media/postit.e2b18b0e6aaf75c5bfa5.png",
+    "static/media/Dhawal_Pandya_Resume.pdf": "/static/media/Dhawal_Pandya_Resume.0a19cb00d42c1c881cd8.pdf",
+    "index.html": "/index.html",
+    "main.fadf9c13.css.map": "/static/css/main.fadf9c13.css.map",
+    "main.a51e583c.js.map": "/static/js/main.a51e583c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fadf9c13.css",
+    "static/js/main.a51e583c.js"
+  ]
+}
