@@ -1,68 +1,93 @@
 .experience__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; */
+  gap: 2rem;
+}
+.container > div > div > article > h4 {
+  font-size: 1.2rem;
 }
 
 .experience__container > div {
-    background: var(--color-bg-variant);
-    padding: 2.4rem 5rem;
-    border-radius: 2rem;
-    border: 1px solid transparent;
-    transition: var(--transition);
+  background: var(--color-bg-variant);
+  padding: 2.4rem 5rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
 }
 
 .experience__container > div:hover {
-    background: transparent;
-    border-color: var(--color-primary-variant);
-    cursor: default;
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
 }
 
 .experience__container > div h3 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
 }
 
 .experience__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 2rem;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: start;
+
+  /* row-gap: 2rem; */
 }
 
+/* .experience__content > * {
+  padding-left: 7rem;
+} */
+
 .experience__details {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .experience__details-icon {
-    margin-top: 6px;
-    color: var(--color-primary);
+  margin-top: 6px;
+  color: var(--color-primary);
 }
 
-@media screen and (max-width: 1024px){
-    .experience__container {
-        grid-template-columns: 1fr;
-    }
+@media screen and (max-width: 1024px) {
+  .experience__container {
+    grid-template-columns: 1fr;
+  }
 
-    .experience__container > div {
-        width: 80%;
-        margin: 0 auto;
-        padding: 2rem;
-    }
+  .experience__container > div {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
 
-    .experience__content p {
-        padding: 1rem;
-    }
+  .experience__content p {
+    padding: 1rem;
+  }
+
+  .experience__content > * {
+    padding-left: 7.5rem;
+  }
 }
-  
-@media screen and (max-width: 600px){
-    .experience__container {
-        gap: 1rem;
-    }
 
-    .experience__container > div {
-        width: 100%;
-        padding: 2rem 1rem;
-    }
+@media screen and (max-width: 600px) {
+  .experience__container {
+    gap: 1rem;
+  }
+
+  .experience__container > div {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .experience__content > * {
+    padding-left: 6rem;
+  }
 }

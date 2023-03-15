@@ -33,16 +33,35 @@ const Intro = () => {
             </div>
           </div>
           <p>
-            I am Dhawal.
-            <br /> I solve problems, by learning as deeply about something
-            needed to solve that problem. <br />I pride on my work, which
-            instills an optimal amount of watchfulness in every piece of
-            software that I code. <br />I may lack experience, but I more than
-            make up for it with my hunger for knowledge. <br />I have got a 5 ⭐
-            <a href='https://www.hackerrank.com/dhawalpandya'> Gold Badge </a>
-            from HackerRank for Problem-Solving.
+            Hello, I am Dhawal, a tech-savvy problem solver who approaches
+            challenges with an insatiable hunger for knowledge.
             <br />
-            Click on the button below to have a conversation with me.
+            <br />
+            My approach to problem-solving involves delving deeply into the
+            intricacies of the issue at hand, ensuring that I am equipped with
+            the tools and expertise needed to devise a successful solution.
+            <br />
+            <br />
+            One aspect of my work that I take immense pride in is my attention
+            to detail. Every line of code that I write is imbued with a level of
+            watchfulness that ensures optimal functionality and performance.
+            <br />
+            <br />
+            While I may be relatively new to the industry, I have already
+            achieved significant recognition for my problem-solving skills.
+            <br />
+            <br />
+            I have been awarded a 5 ⭐ Gold Badge from HackerRank, attesting to
+            my prowess in tackling complex coding challenges.
+            <br />
+            <br />
+            So, if you're seeking a knowledgeable, detail-oriented, and
+            ambitious tech professional to collaborate with on your next
+            project, I invite you to click on the button below and start a
+            conversation with me.
+            <br />
+            <br />
+            Let's solve problems together!
           </p>
           <a href='#contact' className='btn btn-primary'>
             Let's Talk

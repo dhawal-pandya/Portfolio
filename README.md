@@ -6,13 +6,11 @@
 
 ## Built With
 
-- React
-- CSS
-- VS Code
+- ReactJS
 
 ## Deployment
 
-- [View Deployment](https://dhawal-pandya.github.io/Portfolio/)
+- [View Deployment](https://dhawal-pandya.github.io)
 
 # Getting Started
 
