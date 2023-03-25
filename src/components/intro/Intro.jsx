@@ -59,9 +59,6 @@ const Intro = () => {
             ambitious tech professional to collaborate with on your next
             project, I invite you to click on the button below and start a
             conversation with me.
-            <br />
-            <br />
-            Let's solve problems together!
           </p>
           <a href='#contact' className='btn btn-primary'>
             Let's Talk

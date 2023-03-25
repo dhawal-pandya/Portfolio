@@ -6,7 +6,7 @@ import IMG4 from '../../assets/springstorm.png';
 import IMG5 from '../../assets/postit.png';
 import IMG6 from '../../assets/tictactoe.png';
 import IMG7 from '../../assets/colorrandom.png';
-import IMG8 from '../../assets/expensemanager.png';
+// import IMG8 from '../../assets/expensemanager.png';
 
 import './portfolio.css';
 
@@ -61,18 +61,18 @@ const Portfolio = () => {
       link: 'https://dhawal-pandya.github.io/Color-Randomiser-Name/',
       github: 'https://github.com/dhawal-pandya/Color-Randomiser-Name',
     },
-    {
-      id: 8,
-      title: 'Expense-Manager',
-      img: IMG8,
-      link: 'https://dhawal-pandya.github.io/Expense-Manager/',
-      github: 'https://github.com/dhawal-pandya/Expense-Manager',
-    },
+    // {
+    //   id: 8,
+    //   title: 'Expense-Manager',
+    //   img: IMG8,
+    //   link: 'https://dhawal-pandya.github.io/Expense-Manager/',
+    //   github: 'https://github.com/dhawal-pandya/Expense-Manager',
+    // },
   ];
 
   return (
     <section id='portfolio'>
-      <h5>My Recent Work</h5>
+      <h5>My recent work is this</h5>
       <h2>Portfolio</h2>
 
       <div className='container portfolio__container'>
@@ -89,7 +89,7 @@ const Portfolio = () => {
                 rel='noreferrer'
                 className='btn'
               >
-                &lt;&#47;&gt;
+                Code
               </a>
               <a
                 href={proj.link}
@@ -97,7 +97,7 @@ const Portfolio = () => {
                 rel='noreferrer'
                 className='btn btn-primary'
               >
-                &lt;O&gt;
+                Demo
               </a>
             </div>
           </article>

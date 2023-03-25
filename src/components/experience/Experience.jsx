@@ -5,7 +5,7 @@ import './experience.css';
 const Experience = () => {
   return (
     <section id='experience'>
-      <h5>I Have these</h5>
+      <h5>I have these</h5>
       <h2>Skills</h2>
       <div className='container experience__container'>
         <div className='experiences'>
@@ -23,9 +23,7 @@ const Experience = () => {
               <BsFillPatchCheckFill className='experience__details-icon' />
               <h4>JavaScript</h4>
             </article>
-            <article className='experience__details'>
-              <h4>&#x2022;</h4>
-            </article>
+
             <article className='experience__details'>
               <BsFillPatchCheckFill className='experience__details-icon' />
               <h4>TypeScript</h4>
@@ -47,9 +45,7 @@ const Experience = () => {
               <BsFillPatchCheckFill className='experience__details-icon' />
               <h4>Styled Components</h4>
             </article>
-            <article className='experience__details'>
-              <h4>&#x2022;</h4>
-            </article>
+
             <article className='experience__details'>
               <BsFillPatchCheckFill className='experience__details-icon' />
               <h4>ReactJS</h4>

@@ -27,7 +27,7 @@ const Contact = () => {
   };
   return (
     <section id='contact'>
-      <h5>Get In Touch</h5>
+      <h5>Get in touch</h5>
       <h2>Contact Me</h2>
       <div className='container contact__container'>
         <div className='contact__options'>
@@ -37,6 +37,12 @@ const Contact = () => {
             <h4>dhawalpandya.01@gmail.com</h4>
             <a href='mailto:dhawalpandya.01@gmail.com'>Send a message</a>
           </article>
+          <article className='contact__option'>
+            <MdOutlineEmail className='contact__option-icon' />
+            <h4>Mobile</h4>
+            <h4>+91 90990 81738</h4>
+            <a href='tel:+919099081738'>Call me</a>
+          </article>
         </div>
         <form ref={form} onSubmit={handleSubmit}>
           <input
@@ -45,9 +51,9 @@ const Contact = () => {
             name='name'
             required
           />
-          <input type='text' placeholder='Your Email' name='email' required />
+          <input type='email' placeholder='Your Email' name='email' required />
           <textarea
-            placeholder='Your message'
+            placeholder='Your Message'
             rows='7'
             name='message'
             required
