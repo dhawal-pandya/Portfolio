@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.49b0312f.css",
-    "main.js": "/static/js/main.77141ce2.js",
+    "main.css": "/static/css/main.74fcb855.css",
+    "main.js": "/static/js/main.a928aa42.js",
     "static/media/springstorm.png": "/static/media/springstorm.396a53b7d82021b2ab3b.png",
     "static/media/Dhawal_Pandya_Resume.pdf": "/static/media/Dhawal_Pandya_Resume.27f9118baf2af57f8cdc.pdf",
     "static/media/me.png": "/static/media/me.5fe94f8c4be5c033d8d0.png",
     "static/media/footer.png": "/static/media/footer.248e10c08894044d604e.png",
     "static/media/pokedex.png": "/static/media/pokedex.435b7f22f03a30515c34.png",
-    "static/media/expensemanager.png": "/static/media/expensemanager.5a4a6011f00d0f44e450.png",
     "static/media/sudoku.png": "/static/media/sudoku.08085d18fa00a0e6604a.png",
     "static/media/tictactoe.png": "/static/media/tictactoe.cba6b99774d18472fefe.png",
-    "static/media/colorrandom.png": "/static/media/colorrandom.e7d37ef2d19978e6408e.png",
     "static/media/GOL.png": "/static/media/GOL.59c0e501dbf89076d15e.png",
     "static/media/postit.png": "/static/media/postit.e2b18b0e6aaf75c5bfa5.png",
+    "static/media/colorrandom.png": "/static/media/colorrandom.c50401d0d11307745e61.png",
     "index.html": "/index.html",
-    "main.49b0312f.css.map": "/static/css/main.49b0312f.css.map",
-    "main.77141ce2.js.map": "/static/js/main.77141ce2.js.map"
+    "main.74fcb855.css.map": "/static/css/main.74fcb855.css.map",
+    "main.a928aa42.js.map": "/static/js/main.a928aa42.js.map"
   },
   "entrypoints": [
-    "static/css/main.49b0312f.css",
-    "static/js/main.77141ce2.js"
+    "static/css/main.74fcb855.css",
+    "static/js/main.a928aa42.js"
   ]
 }
