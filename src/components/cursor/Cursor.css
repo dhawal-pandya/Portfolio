@@ -1,0 +1,32 @@
+.cursor {
+  position: absolute;
+  z-index: 999;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 20px #00ddeb, 0 0 60px #00ddeb, 0 0 100px #00ddeb;
+  animation: colors 5s infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes colors {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cursor {
+    box-shadow: 0 0 10px #00ddeb, 0 0 30px #00ddeb, 0 0 50px #00ddeb;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cursor {
+    display: none;
+  }
+}

@@ -6,7 +6,8 @@ import IMG4 from '../../assets/springstorm.png';
 import IMG5 from '../../assets/postit.png';
 import IMG6 from '../../assets/tictactoe.png';
 import IMG7 from '../../assets/colorrandom.png';
-// import IMG8 from '../../assets/expensemanager.png';
+import IMG8 from '../../assets/diff-checker.png';
+import IMG9 from '../../assets/num-convertor.png';
 
 import './portfolio.css';
 
@@ -21,7 +22,7 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      title: 'Sudoku Solver',
+      title: 'Sudoku-Solver',
       img: IMG2,
       link: 'https://dhawal-pandya.github.io/Sudoku-Solver/',
       github: 'https://github.com/dhawal-pandya/Sudoku-Solver',
@@ -56,18 +57,25 @@ const Portfolio = () => {
     },
     {
       id: 7,
-      title: 'Color Randomiser',
+      title: 'Color-Randomiser',
       img: IMG7,
       link: 'https://dhawal-pandya.github.io/Color-Randomiser-Name/',
       github: 'https://github.com/dhawal-pandya/Color-Randomiser-Name',
     },
-    // {
-    //   id: 8,
-    //   title: 'Expense-Manager',
-    //   img: IMG8,
-    //   link: 'https://dhawal-pandya.github.io/Expense-Manager/',
-    //   github: 'https://github.com/dhawal-pandya/Expense-Manager',
-    // },
+    {
+      id: 8,
+      title: 'Diff-Checker',
+      img: IMG8,
+      link: 'https://dhawal-pandya.github.io/Diff-Checker',
+      github: 'https://github.com/dhawal-pandya/Diff-Checker',
+    },
+    {
+      id: 9,
+      title: 'Number-Convertor',
+      img: IMG9,
+      link: 'https://dhawal-pandya.github.io/Number-Convertor',
+      github: 'https://github.com/dhawal-pandya/Number-Convertor',
+    },
   ];
 
   return (

@@ -6,10 +6,12 @@ import Header from './components/header/Header';
 import Intro from './components/intro/Intro';
 import Portfolio from './components/portfolio/Portfolio';
 import Topbar from './components/topbar/Topbar';
+import Cursor from './components/cursor/Cursor';
 
 const App = () => {
   return (
     <>
+      <Cursor />
       <Header />
       <Topbar />
       <Intro />
