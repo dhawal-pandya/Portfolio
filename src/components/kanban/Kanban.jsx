@@ -68,7 +68,6 @@ function Kanban() {
     const task = sourceColumn.tasks[source.index];
 
     if (sourceColumn === destinationColumn) {
-      console.log('here');
       dispatch(
         moveTask({
           columnId: sourceColumn.id,
@@ -112,34 +111,36 @@ function Kanban() {
                     {...provided.droppableProps}
                     ref={provided.innerRef}
                   >
-                    {column.tasks.map((task, index) => (
-                      <Draggable
-                        key={task.id}
-                        draggableId={task.id.toString()}
-                        index={index}
-                      >
-                        {(provided) => (
-                          <li
-                            {...provided.draggableProps}
-                            {...provided.dragHandleProps}
-                            ref={provided.innerRef}
-                            className='task'
-                          >
-                            {task.title}
-                            {isAdmin && (
-                              <button
-                                className='delete-task'
-                                onClick={() =>
-                                  handleTaskDelete(column.id, task.id)
-                                }
-                              >
-                                X
-                              </button>
-                            )}
-                          </li>
-                        )}
-                      </Draggable>
-                    ))}
+                    {column.tasks.map((task, index) => {
+                      return (
+                        <Draggable
+                          key={task.id}
+                          draggableId={task.id.toString()}
+                          index={index}
+                        >
+                          {(provided) => (
+                            <li
+                              {...provided.draggableProps}
+                              {...provided.dragHandleProps}
+                              ref={provided.innerRef}
+                              className='task'
+                            >
+                              {task.title}
+                              {isAdmin && (
+                                <button
+                                  className='delete-task'
+                                  onClick={() =>
+                                    handleTaskDelete(column.id, task.id)
+                                  }
+                                >
+                                  X
+                                </button>
+                              )}
+                            </li>
+                          )}
+                        </Draggable>
+                      );
+                    })}
                     {provided.placeholder}
                   </ul>
                 )}

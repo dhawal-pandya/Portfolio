@@ -49,6 +49,7 @@ const kanbanSlice = createSlice({
     deleteColumn: (state, action) => {
       const columnId = action.payload;
       state.columns = state.columns.filter((column) => column.id !== columnId);
+      state.columnCount = state.columns.length;
     },
     addTask: (state, action) => {
       const { columnId, title, index } = action.payload;
@@ -56,7 +57,6 @@ const kanbanSlice = createSlice({
         id: Date.now(),
         title: title,
       };
-      console.log(newTask);
       state.columns.forEach((column) => {
         if (column.id === columnId) {
           column.tasks.splice(index, 0, newTask);
@@ -72,10 +72,12 @@ const kanbanSlice = createSlice({
       });
     },
     moveTask: (state, action) => {
-      const { columnId, sourceIndex, destIndex } = action.payload;
-      const taskToMove = state.columns[columnId - 1].tasks[sourceIndex];
-      state.columns[columnId - 1].tasks.splice(sourceIndex, 1);
-      state.columns[columnId - 1].tasks.splice(destIndex, 0, taskToMove);
+      return;
+      // fix this...
+      // const { columnId, sourceIndex, destIndex } = action.payload;
+      // const taskToMove = state.columns[columnId - 1].tasks[sourceIndex]
+      // state.columns[columnId - 1].tasks.splice(sourceIndex, 1);
+      // state.columns[columnId - 1].tasks.splice(destIndex, 0, taskToMove);
     },
   },
 });
