@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.42febfa4.css",
-    "main.js": "/static/js/main.642632ba.js",
+    "main.css": "/static/css/main.fc371ab6.css",
+    "main.js": "/static/js/main.5d0fbdef.js",
     "static/media/springstorm.png": "/static/media/springstorm.396a53b7d82021b2ab3b.png",
     "static/media/Dhawal_Pandya_Resume.pdf": "/static/media/Dhawal_Pandya_Resume.27f9118baf2af57f8cdc.pdf",
     "static/media/diff-checker.png": "/static/media/diff-checker.0cffdeeb8d5f13265198.png",
@@ -15,11 +15,11 @@
     "static/media/postit.png": "/static/media/postit.e2b18b0e6aaf75c5bfa5.png",
     "static/media/colorrandom.png": "/static/media/colorrandom.c50401d0d11307745e61.png",
     "index.html": "/index.html",
-    "main.42febfa4.css.map": "/static/css/main.42febfa4.css.map",
-    "main.642632ba.js.map": "/static/js/main.642632ba.js.map"
+    "main.fc371ab6.css.map": "/static/css/main.fc371ab6.css.map",
+    "main.5d0fbdef.js.map": "/static/js/main.5d0fbdef.js.map"
   },
   "entrypoints": [
-    "static/css/main.42febfa4.css",
-    "static/js/main.642632ba.js"
+    "static/css/main.fc371ab6.css",
+    "static/js/main.5d0fbdef.js"
   ]
 }
