@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.fc371ab6.css",
-    "main.js": "/static/js/main.5d0fbdef.js",
+    "main.js": "/static/js/main.c2725cc0.js",
     "static/media/springstorm.png": "/static/media/springstorm.396a53b7d82021b2ab3b.png",
     "static/media/Dhawal_Pandya_Resume.pdf": "/static/media/Dhawal_Pandya_Resume.27f9118baf2af57f8cdc.pdf",
     "static/media/diff-checker.png": "/static/media/diff-checker.0cffdeeb8d5f13265198.png",
@@ -16,10 +16,10 @@
     "static/media/colorrandom.png": "/static/media/colorrandom.c50401d0d11307745e61.png",
     "index.html": "/index.html",
     "main.fc371ab6.css.map": "/static/css/main.fc371ab6.css.map",
-    "main.5d0fbdef.js.map": "/static/js/main.5d0fbdef.js.map"
+    "main.c2725cc0.js.map": "/static/js/main.c2725cc0.js.map"
   },
   "entrypoints": [
     "static/css/main.fc371ab6.css",
-    "static/js/main.5d0fbdef.js"
+    "static/js/main.c2725cc0.js"
   ]
 }
