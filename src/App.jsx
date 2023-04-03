@@ -5,8 +5,12 @@ import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import Intro from './components/intro/Intro';
 import Portfolio from './components/portfolio/Portfolio';
+import Kanban from './components/kanban/Kanban';
 import Topbar from './components/topbar/Topbar';
 import Cursor from './components/cursor/Cursor';
+
+import { Provider } from 'react-redux';
+import store from './components/kanban/Utils/store';
 
 const App = () => {
   return (
@@ -17,6 +21,9 @@ const App = () => {
       <Intro />
       <Experience />
       <Portfolio />
+      <Provider store={store}>
+        <Kanban />
+      </Provider>
       <Contact />
       <Footer />
     </>

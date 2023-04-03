@@ -1,0 +1,178 @@
+.kanban-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.columns-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.5rem;
+  margin: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .columns-container {
+    display: grid;
+    /* flex-wrap: wrap; */
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+  .columns-container > * {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .columns-container {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  background: var(--color-bg-variant);
+  margin: 10px 10px;
+  border-radius: 5px;
+  min-width: 300px;
+  flex-grow: 1;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+}
+
+.column:hover {
+  border-color: var(--color-primary-variant);
+  background: transparent;
+}
+
+.column h2 {
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.task {
+  min-width: 40px;
+  background-color: var(--color-primary-variant);
+  color: var(--color-bg-variant);
+  border: 1px solid var(--color-white);
+  border-radius: 1rem;
+  margin: 10px;
+  padding: 10px;
+  cursor: grab;
+  list-style-type: none;
+  text-align: center;
+}
+
+.task:hover {
+  background-color: var(--color-white);
+  color: var(--color-bg-variant);
+  border: 1px solid transparent;
+}
+
+.add-task-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3px;
+  flex-grow: 1;
+}
+
+.add-task-container input[type='text'] {
+  flex: 1;
+  padding: 5px;
+  width: 17rem;
+  max-height: 2rem;
+}
+
+.add-task-container button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  margin: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-task-container button:hover {
+  background-color: #3e8e41;
+}
+
+.delete-task {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  float: right;
+}
+
+.delete-task:hover {
+  background-color: #d32f2f;
+}
+
+.delete-column {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.delete-column:hover {
+  background-color: #d32f2f;
+}
+
+.add-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  background: var(--color-bg-variant);
+  margin: 10px 10px;
+  border-radius: 5px;
+  min-width: 300px;
+  flex-grow: 1;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+}
+
+.add-column-input[type='text'] {
+  width: 19rem;
+  padding: 5px;
+}
+
+.add-column-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.add-column button:hover {
+  background-color: #3e8e41;
+}

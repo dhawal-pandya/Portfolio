@@ -38,7 +38,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: start;
+  align-items: flex-start;
 
   /* row-gap: 2rem; */
 }
