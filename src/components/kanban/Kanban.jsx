@@ -7,7 +7,6 @@ import {
   deleteColumn,
   addTask,
   deleteTask,
-  moveTask,
 } from './Utils/kanbanSlice';
 
 import { DragDropContext, Draggable } from 'react-beautiful-dnd';
@@ -67,24 +66,14 @@ function Kanban() {
     );
     const task = sourceColumn.tasks[source.index];
 
-    if (sourceColumn === destinationColumn) {
-      dispatch(
-        moveTask({
-          columnId: sourceColumn.id,
-          fromIndex: source.index,
-          toIndex: destination.index,
-        })
-      );
-    } else {
-      dispatch(deleteTask({ columnId: sourceColumn.id, taskId: task.id }));
-      dispatch(
-        addTask({
-          columnId: destinationColumn.id,
-          title: task.title,
-          index: destination.index,
-        })
-      );
-    }
+    dispatch(deleteTask({ columnId: sourceColumn.id, taskId: task.id }));
+    dispatch(
+      addTask({
+        columnId: destinationColumn.id,
+        title: task.title,
+        index: destination.index,
+      })
+    );
   };
 
   return (

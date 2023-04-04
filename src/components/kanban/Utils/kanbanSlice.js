@@ -71,18 +71,18 @@ const kanbanSlice = createSlice({
         }
       });
     },
-    moveTask: (state, action) => {
-      return;
-      // fix this...
-      // const { columnId, sourceIndex, destIndex } = action.payload;
-      // const taskToMove = state.columns[columnId - 1].tasks[sourceIndex]
-      // state.columns[columnId - 1].tasks.splice(sourceIndex, 1);
-      // state.columns[columnId - 1].tasks.splice(destIndex, 0, taskToMove);
-    },
+    // moveTask: (state, action) => {
+    //   return;
+    //   // fix this...
+    //   // const { columnId, sourceIndex, destIndex } = action.payload;
+    //   // const taskToMove = state.columns[columnId - 1].tasks[sourceIndex]
+    //   // state.columns[columnId - 1].tasks.splice(sourceIndex, 1);
+    //   // state.columns[columnId - 1].tasks.splice(destIndex, 0, taskToMove);
+    // },
   },
 });
 
-export const { addColumn, deleteColumn, addTask, deleteTask, moveTask } =
+export const { addColumn, deleteColumn, addTask, deleteTask } =
   kanbanSlice.actions;
 
 export default kanbanSlice.reducer;
