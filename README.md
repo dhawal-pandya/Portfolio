@@ -16,7 +16,7 @@
 
 ## Prerequisites:
 
-- Create an account on github
+- Create an account on github.
 
 - Install gitbash or use git on the command line.
 
