@@ -1,35 +1,34 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const kanbanSlice = createSlice({
-  name: 'kanban',
+  name: "kanban",
   initialState: {
     columns: [
       {
         id: 1,
-        title: 'Going to do',
+        title: "Going to do",
         tasks: [
-          { id: 1, title: 'Mastering Rust' },
-          { id: 2, title: 'Mastering WebAssembly' },
-          { id: 3, title: 'Learning Networking Essentials ' },
+          { id: 1, title: "Bring Order out of Chaos" },
+          { id: 2, title: "Prove p = np" },
+          { id: 3, title: "Attempt to solve the Collatz Conjecture" },
         ],
       },
       {
         id: 2,
-        title: 'Doing',
+        title: "Doing",
         tasks: [
-          { id: 4, title: 'Mastering NodeJS' },
-          { id: 5, title: 'Learning Rust' },
-          { id: 10, title: 'Learning WebAssembly' },
-          { id: 6, title: 'Mastering DSA (Hard)' },
+          { id: 4, title: "Realise the Truth with Code" },
+          { id: 5, title: "Yoga" },
+          { id: 6, title: "DSA practice" },
         ],
       },
       {
         id: 3,
-        title: 'Done',
+        title: "Done",
         tasks: [
-          { id: 7, title: 'Learning NodeJS' },
-          { id: 8, title: 'Mastering DSA (Medium)' },
-          { id: 9, title: 'Mastering DSA (Easy)' },
+          { id: 7, title: "Learn Japanese" },
+          { id: 8, title: "Smile at a cat" },
+          { id: 9, title: "Feed the birds" },
         ],
       },
     ],
