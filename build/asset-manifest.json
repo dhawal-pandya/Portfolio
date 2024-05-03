@@ -1,9 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.fc371ab6.css",
-    "main.js": "/static/js/main.965124e9.js",
+    "main.js": "/static/js/main.c6910657.js",
     "static/media/springstorm.png": "/static/media/springstorm.396a53b7d82021b2ab3b.png",
-    "static/media/Dhawal_Pandya_Resume.pdf": "/static/media/Dhawal_Pandya_Resume.27f9118baf2af57f8cdc.pdf",
     "static/media/diff-checker.png": "/static/media/diff-checker.0cffdeeb8d5f13265198.png",
     "static/media/me.png": "/static/media/me.5fe94f8c4be5c033d8d0.png",
     "static/media/footer.png": "/static/media/footer.248e10c08894044d604e.png",
@@ -12,14 +11,15 @@
     "static/media/sudoku.png": "/static/media/sudoku.08085d18fa00a0e6604a.png",
     "static/media/tictactoe.png": "/static/media/tictactoe.cba6b99774d18472fefe.png",
     "static/media/GOL.png": "/static/media/GOL.59c0e501dbf89076d15e.png",
+    "static/media/Dhawal_Pandya_Resume.pdf": "/static/media/Dhawal_Pandya_Resume.c4e9c3615ef358032632.pdf",
     "static/media/postit.png": "/static/media/postit.e2b18b0e6aaf75c5bfa5.png",
     "static/media/colorrandom.png": "/static/media/colorrandom.c50401d0d11307745e61.png",
     "index.html": "/index.html",
     "main.fc371ab6.css.map": "/static/css/main.fc371ab6.css.map",
-    "main.965124e9.js.map": "/static/js/main.965124e9.js.map"
+    "main.c6910657.js.map": "/static/js/main.c6910657.js.map"
   },
   "entrypoints": [
     "static/css/main.fc371ab6.css",
-    "static/js/main.965124e9.js"
+    "static/js/main.c6910657.js"
   ]
 }
