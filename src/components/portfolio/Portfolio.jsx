@@ -1,13 +1,16 @@
 import React from 'react';
 import IMG1 from '../../assets/GOL.png';
-import IMG2 from '../../assets/sudoku.png';
-import IMG3 from '../../assets/pokedex.png';
-import IMG4 from '../../assets/springstorm.png';
-import IMG5 from '../../assets/postit.png';
-import IMG6 from '../../assets/tictactoe.png';
-import IMG7 from '../../assets/colorrandom.png';
-import IMG8 from '../../assets/diff-checker.png';
-import IMG9 from '../../assets/num-convertor.png';
+import IMG2 from '../../assets/neatrace.jpg';
+import IMG3 from '../../assets/Asteroids.png';
+import IMG4 from '../../assets/QR.png';
+import IMG5 from '../../assets/murl.png';
+import IMG6 from '../../assets/pokedex.png';
+import IMG7 from '../../assets/fynd.png';
+import IMG8 from '../../assets/springstorm.png';
+import IMG9 from '../../assets/sudoku.png';
+import IMG10 from '../../assets/diff-checker.png';
+import IMG11 from '../../assets/num-convertor.png';
+import IMG12 from '../../assets/more.png';
 
 import './portfolio.css';
 
@@ -19,64 +22,90 @@ const Portfolio = () => {
       img: IMG1,
       link: 'https://dhawal-pandya.github.io/Game-Of-Life/',
       github: 'https://github.com/dhawal-pandya/Game-Of-Life',
+      language: ['JavaScript (React)', 'TailwindCSS'],
     },
     {
       id: 2,
-      title: 'Sudoku-Solver',
+      title: 'NeatTrace',
       img: IMG2,
-      link: 'https://dhawal-pandya.github.io/Sudoku-Solver/',
-      github: 'https://github.com/dhawal-pandya/Sudoku-Solver',
+      github: 'https://github.com/dhawal-pandya/NeatTrace',
+      language: ['Golang', 'Rust'],
     },
     {
       id: 3,
-      title: 'Pokedex',
+      title: 'Asteroids',
       img: IMG3,
-      link: 'https://dhawal-pandya.github.io/Pokedex/',
-      github: 'https://github.com/dhawal-pandya/Pokedex',
+      github: 'https://github.com/dhawal-pandya/Asteroids',
+      language: ['Golang', 'Ebiten (Game Engine)'],
     },
     {
       id: 4,
-      title: 'SpringStorm',
+      title: 'QRCode Generator',
       img: IMG4,
-      link: 'https://dhawal-pandya.github.io/SpringStorm/',
-      github: 'https://github.com/dhawal-pandya/SpringStorm',
+      github: 'https://github.com/dhawal-pandya/qrcode-generator-decoder',
+      language: ['Golang'],
     },
     {
       id: 5,
-      title: 'PostIt',
+      title: 'Murl',
       img: IMG5,
-      link: 'https://dhawal-pandya.github.io/PostIt/',
-      github: 'https://github.com/dhawal-pandya/PostIt',
+      github: 'https://github.com/dhawal-pandya/Murl',
+      language: ['Golang'],
     },
     {
       id: 6,
-      title: 'Tic-Tac-Toe',
+      title: 'Pokedex',
       img: IMG6,
-      link: 'https://dhawal-pandya.github.io/Tic-Tac-Toe/',
-      github: 'https://github.com/dhawal-pandya/Tic-Tac-Toe',
+      link: 'https://dhawal-pandya.github.io/Pokedex/',
+      github: 'https://github.com/dhawal-pandya/Pokedex',
+      language: ['JavaScript (React)', 'TailwindCSS'],
     },
     {
       id: 7,
-      title: 'Color-Randomiser',
+      title: 'Fynd',
       img: IMG7,
-      link: 'https://dhawal-pandya.github.io/Color-Randomiser-Name/',
-      github: 'https://github.com/dhawal-pandya/Color-Randomiser-Name',
+      github: 'https://github.com/dhawal-pandya/Fynd',
+      language: ['Golang'],
     },
     {
       id: 8,
-      title: 'Diff-Checker',
+      title: 'SpringStorm',
       img: IMG8,
-      link: 'https://dhawal-pandya.github.io/Diff-Checker',
-      github: 'https://github.com/dhawal-pandya/Diff-Checker',
+      link: 'https://dhawal-pandya.github.io/SpringStorm/',
+      github: 'https://github.com/dhawal-pandya/SpringStorm',
+      language: ['JavaScript (React)', 'TailwindCSS'],
     },
     {
       id: 9,
-      title: 'Number-Convertor',
+      title: 'Sudoku-Solver',
       img: IMG9,
-      link: 'https://dhawal-pandya.github.io/Number-Convertor',
+      link: 'https://dhawal-pandya.github.io/Sudoku-Solver/',
+      github: 'https://github.com/dhawal-pandya/Sudoku-Solver',
+      language: ['JavaScript (React)', 'TailwindCSS'],
+    },
+    {
+      id: 10,
+      title: 'Diff-Checker',
+      img: IMG10,
+      link: 'https://dhawal-pandya.github.io/Diff-Checker/',
+      github: 'https://github.com/dhawal-pandya/Diff-Checker',
+      language: ['JavaScript (React)', 'TailwindCSS'],
+    },
+    {
+      id: 11,
+      title: 'Number-Convertor',
+      img: IMG11,
+      link: 'https://dhawal-pandya.github.io/Number-Convertor/',
       github: 'https://github.com/dhawal-pandya/Number-Convertor',
+      language: ['JavaScript (React)', 'TailwindCSS'],
+    },
+    {
+      id: 12,
+      img: IMG12,
+      language: ['And so many more...'],
     },
   ];
+  
 
   return (
     <section id='portfolio'>
@@ -89,25 +118,30 @@ const Portfolio = () => {
             <div className='portfolio__item-image'>
               <img src={proj.img} alt={proj.title} />
             </div>
+          <div className='portfolio__item-info'>
             <h3>{proj.title}</h3>
+            { proj.language ? <h4 className='portfolio__languages'>
+              {proj.language.join(', ')}
+            </h4> :null}
             <div className='portfolio__item-cta'>
-              <a
+             {proj.github? <a
                 href={proj.github}
                 target='_blank'
                 rel='noreferrer'
                 className='btn'
-              >
+                >
                 Code
-              </a>
-              <a
+              </a>:null}
+              { proj.link ? <a
                 href={proj.link}
                 target='_blank'
                 rel='noreferrer'
                 className='btn btn-primary'
-              >
+                >
                 Demo
-              </a>
+              </a> : null}
             </div>
+                </div>
           </article>
         ))}
       </div>

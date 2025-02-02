@@ -23,6 +23,7 @@ h4 {
   text-align: center;
   border: 1px solid transparent;
   transition: var(--transition);
+  height:11rem;
 }
 
 .contact__option:hover {
@@ -56,10 +57,14 @@ form {
   gap: 1.2rem;
 }
 
+.contact__form-input {
+  padding: 0.8rem;
+
+}
+
 input,
 textarea {
   width: 100%;
-  padding: 1.5rem;
   border-radius: 0.5rem;
   background: transparent;
   border: 2px solid var(--color-primary-variant);

@@ -50,13 +50,20 @@ const Contact = () => {
         </div>
         <form ref={form} onSubmit={handleSubmit}>
           <input
+            className="contact__form-input"
             type="text"
             placeholder="Your Full Name"
             name="full name"
             required
           />
-          <input type="email" placeholder="Your Email" name="email" required />
+          <input 
+            className="contact__form-input"
+            type="email" 
+            placeholder="Your Email" 
+            name="email" 
+            required />
           <textarea
+            className="contact__form-input"
             placeholder="Your Message"
             rows="7"
             name="message"
