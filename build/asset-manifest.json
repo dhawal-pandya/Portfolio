@@ -1,25 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.fc371ab6.css",
-    "main.js": "/static/js/main.c6910657.js",
+    "main.css": "/static/css/main.24e549d5.css",
+    "main.js": "/static/js/main.8089ed1a.js",
+    "static/media/fynd.png": "/static/media/fynd.8c16bea73ddd8f930933.png",
+    "static/media/murl.png": "/static/media/murl.ad94b51d1bf2a814ef68.png",
     "static/media/springstorm.png": "/static/media/springstorm.396a53b7d82021b2ab3b.png",
+    "static/media/Asteroids.png": "/static/media/Asteroids.8b9f9f5f33650fc506f2.png",
+    "static/media/more.png": "/static/media/more.2910fb53b75b3e073a44.png",
     "static/media/diff-checker.png": "/static/media/diff-checker.0cffdeeb8d5f13265198.png",
     "static/media/me.png": "/static/media/me.5fe94f8c4be5c033d8d0.png",
+    "static/media/neatrace.jpg": "/static/media/neatrace.b3bc0de8a54a90927dd2.jpg",
     "static/media/footer.png": "/static/media/footer.248e10c08894044d604e.png",
     "static/media/num-convertor.png": "/static/media/num-convertor.b1db4ccfb3efe1d47a57.png",
     "static/media/pokedex.png": "/static/media/pokedex.435b7f22f03a30515c34.png",
+    "static/media/Dhawal_Pandya_Resume.pdf": "/static/media/Dhawal_Pandya_Resume.8c092fd45d5ec136f8a9.pdf",
     "static/media/sudoku.png": "/static/media/sudoku.08085d18fa00a0e6604a.png",
-    "static/media/tictactoe.png": "/static/media/tictactoe.cba6b99774d18472fefe.png",
     "static/media/GOL.png": "/static/media/GOL.59c0e501dbf89076d15e.png",
-    "static/media/Dhawal_Pandya_Resume.pdf": "/static/media/Dhawal_Pandya_Resume.c4e9c3615ef358032632.pdf",
-    "static/media/postit.png": "/static/media/postit.e2b18b0e6aaf75c5bfa5.png",
-    "static/media/colorrandom.png": "/static/media/colorrandom.c50401d0d11307745e61.png",
     "index.html": "/index.html",
-    "main.fc371ab6.css.map": "/static/css/main.fc371ab6.css.map",
-    "main.c6910657.js.map": "/static/js/main.c6910657.js.map"
+    "main.24e549d5.css.map": "/static/css/main.24e549d5.css.map",
+    "main.8089ed1a.js.map": "/static/js/main.8089ed1a.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc371ab6.css",
-    "static/js/main.c6910657.js"
+    "static/css/main.24e549d5.css",
+    "static/js/main.8089ed1a.js"
   ]
 }
