@@ -5,44 +5,42 @@ import { BiBook } from 'react-icons/bi';
 import { RiServiceLine } from 'react-icons/ri';
 import { BiMessageSquareDetail } from 'react-icons/bi';
 
-import './topbar.css';
-
 const Topbar = () => {
   const [activeNav, setActiveNav] = useState('#home');
   return (
-    <nav>
+    <nav className="bg-black/30 w-max fixed left-1/2 -translate-x-1/2 bottom-8 flex gap-[0.8rem] py-[0.7rem] px-[1.7rem] z-[2] rounded-[3rem] backdrop-blur-[7px]">
       <a
         href='#home'
         onClick={() => setActiveNav('#home')}
-        className={activeNav === '#home' ? 'active' : ''}
+        className={`p-[0.9rem] rounded-full flex text-[1.1rem] hover:bg-black/30 ${activeNav === '#home' ? 'bg-bg text-white' : 'bg-transparent text-light'}`}
       >
         <AiOutlineHome />
       </a>
       <a
         href='#about'
         onClick={() => setActiveNav('#about')}
-        className={activeNav === '#about' ? 'active' : ''}
+        className={`p-[0.9rem] rounded-full flex text-[1.1rem] hover:bg-black/30 ${activeNav === '#about' ? 'bg-bg text-white' : 'bg-transparent text-light'}`}
       >
         <AiOutlineUser />
       </a>
       <a
         href='#experience'
         onClick={() => setActiveNav('#experience')}
-        className={activeNav === '#experience' ? 'active' : ''}
+        className={`p-[0.9rem] rounded-full flex text-[1.1rem] hover:bg-black/30 ${activeNav === '#experience' ? 'bg-bg text-white' : 'bg-transparent text-light'}`}
       >
         <BiBook />
       </a>
       <a
         href='#portfolio'
         onClick={() => setActiveNav('#portfolio')}
-        className={activeNav === '#portfolio' ? 'active' : ''}
+        className={`p-[0.9rem] rounded-full flex text-[1.1rem] hover:bg-black/30 ${activeNav === '#portfolio' ? 'bg-bg text-white' : 'bg-transparent text-light'}`}
       >
         <RiServiceLine />
       </a>
       <a
         href='#contact'
         onClick={() => setActiveNav('#contact')}
-        className={activeNav === '#contact' ? 'active' : ''}
+        className={`p-[0.9rem] rounded-full flex text-[1.1rem] hover:bg-black/30 ${activeNav === '#contact' ? 'bg-bg text-white' : 'bg-transparent text-light'}`}
       >
         <BiMessageSquareDetail />
       </a>
