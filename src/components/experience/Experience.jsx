@@ -31,7 +31,7 @@ const Experience = () => {
     },
     {
       title: "Tools",
-      skills: ["Linux/Unix", "Terminal", "Git/Github", "Visual Studio Code"],
+      skills: ["Linux/Unix", "CLI", "Git/Github", "Visual Studio Code"],
     },
   ];
 

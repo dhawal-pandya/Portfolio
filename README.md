@@ -39,7 +39,7 @@
   ```
 - To run app in the development mode run
 - ```
-  npm start
+  npm run dev
   ```
 
 ## Author

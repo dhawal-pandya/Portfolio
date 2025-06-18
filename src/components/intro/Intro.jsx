@@ -3,7 +3,7 @@ import React from "react";
 import { VscFolderLibrary } from "react-icons/vsc";
 import ME from "../../assets/me.png";
 
-const Intro = () => {
+const Intro = ({ toggleWorkExperience, isWorkExperienceVisible }) => {
   return (
     <section id="about">
       <h5>Get to know</h5>
@@ -46,10 +46,6 @@ const Intro = () => {
             watchfulness that ensures optimal functionality and performance.
             <br />
             <br />
-            While I may be relatively new to the industry, I have already
-            achieved significant recognition for my problem-solving skills.
-            <br />
-            <br />
             I have been awarded a 5 ⭐ Gold Badge from HackerRank, attesting to
             my prowess in tackling complex coding challenges.
             <br />
@@ -59,9 +55,14 @@ const Intro = () => {
             project, I invite you to click on the button below and start a
             conversation with me.
           </p>
-          <a href="#contact" className="btn btn-primary">
-            Let's Talk
-          </a>
+          <div className="flex gap-4">
+            <a href="#contact" className="btn btn-primary">
+              Let's Talk
+            </a>
+            <button className="btn" onClick={toggleWorkExperience}>
+              {isWorkExperienceVisible ? "Show Less" : "Tell Me More"}
+            </button>
+          </div>
         </div>
       </div>
     </section>
