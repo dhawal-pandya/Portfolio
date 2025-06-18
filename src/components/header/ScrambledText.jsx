@@ -9,9 +9,9 @@ const ScrambledText = () => {
     "Yogi",
     "The Universe itself",
     "Why are you still reading this?",
-    "Okay, here a joke for you",
+    "Okay, here's a joke for you",
     "What does an existential AI say when asked about the meaning of life?",
-    "Undefined. Please scroll on.",
+    "undefined",
     "Really, please scroll on...",
     "Here's who I am,",
   ];

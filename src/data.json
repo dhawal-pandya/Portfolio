@@ -153,5 +153,30 @@
       "img": "src/assets/more.png",
       "language": ["And so many more..."]
     }
+  ],
+  "soloAiProjects": [
+    {
+      "title": "Elo Chat App",
+      "img": "src/assets/elo-chat.png",
+      "link": "https://elo-service-608661670952.us-central1.run.app/dev-ui/?app=elo-chat-app",
+      "github": "https://github.com/dhawal-pandya/elo-ai",
+      "language": [
+        "Python",
+        "Google Gemini (via Vertex AI)",
+        "Ollama",
+        "MCP Server",
+        "ADK"
+      ]
+    },
+    {
+      "title": "Recomendation Engine",
+      "img": "src/assets/recom.png",
+      "link": "https://recom-engine-197062920928.us-central1.run.app/",
+      "language": ["Python", "Vertex AI", "Neo4j", "Cypher", "GraphRAG"]
+    },
+    {
+      "img": "src/assets/ai-more.png",
+      "language": ["And many more..."]
+    }
   ]
 }
