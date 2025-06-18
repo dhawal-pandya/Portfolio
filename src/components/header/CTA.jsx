@@ -1,13 +1,13 @@
-import React from 'react';
-import CV from '../../assets/Dhawal_Pandya_Resume.pdf';
+import React from "react";
+import CV from "../../assets/Dhawal_Pandya_Resume.pdf";
 
 const CTA = () => {
   return (
-    <div className='cta'>
-      <a href={CV} download className='btn'>
+    <div className="mt-44 flex justify-center gap-5">
+      <a href={CV} download className="btn">
         Download Resume
       </a>
-      <a href='#contact' className='btn btn-primary'>
+      <a href="#contact" className="btn btn-primary">
         Let's talk
       </a>
     </div>

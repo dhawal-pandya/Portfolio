@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
-import './Kanban.css';
+import React, { useState } from "react";
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 import {
   addColumn,
   deleteColumn,
   addTask,
   deleteTask,
-} from './Utils/kanbanSlice';
+} from "./Utils/kanbanSlice";
 
-import { DragDropContext, Draggable } from 'react-beautiful-dnd';
-import { StrictModeDroppable } from './Droppable';
+import { DragDropContext, Draggable } from "react-beautiful-dnd";
+import { StrictModeDroppable } from "./Droppable";
 
 function Kanban() {
   const [isAdmin, setIsAdmin] = useState(false);
@@ -19,20 +18,20 @@ function Kanban() {
 
   const columns = useSelector((state) => state.kanban.columns);
 
-  const [newColumnTitle, setNewColumnTitle] = useState('');
-  const [newTaskTitle, setNewTaskTitle] = useState('');
+  const [newColumnTitle, setNewColumnTitle] = useState("");
+  const [newTaskTitle, setNewTaskTitle] = useState("");
 
   const handleColumnAdd = () => {
-    if (newColumnTitle !== '') {
+    if (newColumnTitle !== "") {
       dispatch(addColumn(newColumnTitle));
-      setNewColumnTitle('');
+      setNewColumnTitle("");
     }
   };
 
   const handleTaskAdd = (columnId) => {
-    if (newTaskTitle !== '') {
+    if (newTaskTitle !== "") {
       dispatch(addTask({ columnId, title: newTaskTitle }));
-      setNewTaskTitle('');
+      setNewTaskTitle("");
     }
   };
 
@@ -77,10 +76,10 @@ function Kanban() {
   };
 
   return (
-    <section id='kanban'>
+    <section id="kanban">
       <h5>What I'm upto on my</h5>
       <h2
-        className='kanban-board'
+        className="flex flex-col items-center font-sans"
         onClick={(e) => {
           e.stopPropagation();
           setIsAdmin(!isAdmin);
@@ -88,15 +87,18 @@ function Kanban() {
       >
         Kanban Board
       </h2>
-      <div className='columns-container'>
+      <div className="m-1 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         <DragDropContext onDragEnd={handleDragEnd}>
           {columns.map((column) => (
-            <div key={column.id} className='column'>
-              <h2>{column.title}</h2>
+            <div
+              key={column.id}
+              className="m-2.5 flex min-w-[300px] flex-grow flex-col items-center justify-center rounded-3xl border border-transparent bg-[#2c2c6c] transition-all duration-400 ease-in-out hover:border-[#4db5ff66] hover:bg-transparent"
+            >
+              <h2 className="p-2.5 text-center">{column.title}</h2>
               <StrictModeDroppable droppableId={column.id.toString()}>
                 {(provided) => (
                   <ul
-                    className='task-list'
+                    className="flex w-1/2 flex-col flex-wrap"
                     {...provided.droppableProps}
                     ref={provided.innerRef}
                   >
@@ -112,12 +114,12 @@ function Kanban() {
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
                               ref={provided.innerRef}
-                              className='task'
+                              className="m-2.5 min-w-[40px] cursor-grab list-none rounded-2xl border border-white bg-[#4db5ff66] p-2.5 text-center text-[#2c2c6c] transition-all duration-400 ease-in-out hover:border-transparent hover:bg-white"
                             >
                               {task.title}
                               {isAdmin && (
                                 <button
-                                  className='delete-task'
+                                  className="float-right cursor-pointer rounded-full bg-red-500 p-2 text-white"
                                   onClick={() =>
                                     handleTaskDelete(column.id, task.id)
                                   }
@@ -136,17 +138,23 @@ function Kanban() {
               </StrictModeDroppable>
               {isAdmin && (
                 <>
-                  <div className='add-task-container'>
+                  <div className="m-1 flex flex-grow flex-col items-center justify-center">
                     <input
-                      type='text'
-                      placeholder='Add Task'
+                      type="text"
+                      placeholder="Add Task"
                       value={newTaskTitle}
                       onChange={(e) => setNewTaskTitle(e.target.value)}
+                      className="h-8 max-h-8 w-68 flex-1 rounded-md border-2 border-[#4db5ff66] bg-transparent p-1 text-white"
                     />
-                    <button onClick={() => handleTaskAdd(column.id)}>+</button>
+                    <button
+                      onClick={() => handleTaskAdd(column.id)}
+                      className="m-4 cursor-pointer rounded-md bg-green-600 p-2.5 text-white hover:bg-green-700"
+                    >
+                      +
+                    </button>
                   </div>
                   <button
-                    className='delete-column'
+                    className="mb-2.5 cursor-pointer rounded-md bg-red-500 p-2.5 text-white hover:bg-red-600"
                     onClick={() => handleColumnDelete(column.id)}
                   >
                     Delete Column
@@ -156,17 +164,19 @@ function Kanban() {
             </div>
           ))}
           {isAdmin && (
-            <div className='column'>
+            <div className="m-2.5 flex min-w-[300px] flex-grow flex-col items-center justify-center rounded-3xl border border-transparent bg-[#2c2c6c] p-2.5 hover:border-[#4db5ff66] hover:bg-transparent">
               <h2>Add new column</h2>
-
               <input
-                className='add-column-input'
-                type='text'
-                placeholder='Add Column'
+                className="w-76 rounded-md border-2 border-[#4db5ff66] bg-transparent p-1 text-white"
+                type="text"
+                placeholder="Add Column"
                 value={newColumnTitle}
                 onChange={(e) => setNewColumnTitle(e.target.value)}
               />
-              <button className='add-column-button' onClick={handleColumnAdd}>
+              <button
+                className="m-2.5 cursor-pointer rounded-md bg-green-600 p-2.5 text-white hover:bg-green-700"
+                onClick={handleColumnAdd}
+              >
                 +
               </button>
             </div>

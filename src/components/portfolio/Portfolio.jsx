@@ -1,147 +1,157 @@
-import React from 'react';
-import IMG1 from '../../assets/GOL.png';
-import IMG2 from '../../assets/neatrace.jpg';
-import IMG3 from '../../assets/Asteroids.png';
-import IMG4 from '../../assets/QR.png';
-import IMG5 from '../../assets/murl.png';
-import IMG6 from '../../assets/pokedex.png';
-import IMG7 from '../../assets/fynd.png';
-import IMG8 from '../../assets/springstorm.png';
-import IMG9 from '../../assets/sudoku.png';
-import IMG10 from '../../assets/diff-checker.png';
-import IMG11 from '../../assets/num-convertor.png';
-import IMG12 from '../../assets/more.png';
-
-import './portfolio.css';
+import React from "react";
+import IMG1 from "../../assets/GOL.png";
+import IMG2 from "../../assets/neatrace.jpg";
+import IMG3 from "../../assets/Asteroids.png";
+import IMG4 from "../../assets/QR.png";
+import IMG5 from "../../assets/murl.png";
+import IMG6 from "../../assets/pokedex.png";
+import IMG7 from "../../assets/fynd.png";
+import IMG8 from "../../assets/springstorm.png";
+import IMG9 from "../../assets/sudoku.png";
+import IMG10 from "../../assets/diff-checker.png";
+import IMG11 from "../../assets/num-convertor.png";
+import IMG12 from "../../assets/more.png";
 
 const Portfolio = () => {
   const soloProjects = [
     {
       id: 1,
-      title: 'Game Of Life',
+      title: "Game Of Life",
       img: IMG1,
-      link: 'https://dhawal-pandya.github.io/Game-Of-Life/',
-      github: 'https://github.com/dhawal-pandya/Game-Of-Life',
-      language: ['JavaScript (React)', 'TailwindCSS'],
+      link: "https://dhawal-pandya.github.io/Game-Of-Life/",
+      github: "https://github.com/dhawal-pandya/Game-Of-Life",
+      language: ["JavaScript (React)", "TailwindCSS"],
     },
     {
       id: 2,
-      title: 'NeatTrace',
+      title: "NeatTrace",
       img: IMG2,
-      github: 'https://github.com/dhawal-pandya/NeatTrace',
-      language: ['Golang', 'Rust'],
+      github: "https://github.com/dhawal-pandya/NeatTrace",
+      language: ["Golang", "Rust"],
     },
     {
       id: 3,
-      title: 'Asteroids',
+      title: "Asteroids",
       img: IMG3,
-      github: 'https://github.com/dhawal-pandya/Asteroids',
-      language: ['Golang', 'Ebiten (Game Engine)'],
+      github: "https://github.com/dhawal-pandya/Asteroids",
+      language: ["Golang", "Ebiten (Game Engine)"],
     },
     {
       id: 4,
-      title: 'QRCode Generator',
+      title: "QRCode Generator",
       img: IMG4,
-      github: 'https://github.com/dhawal-pandya/qrcode-generator-decoder',
-      language: ['Golang'],
+      github: "https://github.com/dhawal-pandya/qrcode-generator-decoder",
+      language: ["Golang"],
     },
     {
       id: 5,
-      title: 'Murl',
+      title: "Murl",
       img: IMG5,
-      github: 'https://github.com/dhawal-pandya/Murl',
-      language: ['Golang'],
+      github: "https://github.com/dhawal-pandya/Murl",
+      language: ["Golang"],
     },
     {
       id: 6,
-      title: 'Pokedex',
+      title: "Pokedex",
       img: IMG6,
-      link: 'https://dhawal-pandya.github.io/Pokedex/',
-      github: 'https://github.com/dhawal-pandya/Pokedex',
-      language: ['JavaScript (React)', 'TailwindCSS'],
+      link: "https://dhawal-pandya.github.io/Pokedex/",
+      github: "https://github.com/dhawal-pandya/Pokedex",
+      language: ["JavaScript (React)", "TailwindCSS"],
     },
     {
       id: 7,
-      title: 'Fynd',
+      title: "Fynd",
       img: IMG7,
-      github: 'https://github.com/dhawal-pandya/Fynd',
-      language: ['Golang'],
+      github: "https://github.com/dhawal-pandya/Fynd",
+      language: ["Golang"],
     },
     {
       id: 8,
-      title: 'SpringStorm',
+      title: "SpringStorm",
       img: IMG8,
-      link: 'https://dhawal-pandya.github.io/SpringStorm/',
-      github: 'https://github.com/dhawal-pandya/SpringStorm',
-      language: ['JavaScript (React)', 'TailwindCSS'],
+      link: "https://dhawal-pandya.github.io/SpringStorm/",
+      github: "https://github.com/dhawal-pandya/SpringStorm",
+      language: ["JavaScript (React)", "TailwindCSS"],
     },
     {
       id: 9,
-      title: 'Sudoku-Solver',
+      title: "Sudoku-Solver",
       img: IMG9,
-      link: 'https://dhawal-pandya.github.io/Sudoku-Solver/',
-      github: 'https://github.com/dhawal-pandya/Sudoku-Solver',
-      language: ['JavaScript (React)', 'TailwindCSS'],
+      link: "https://dhawal-pandya.github.io/Sudoku-Solver/",
+      github: "https://github.com/dhawal-pandya/Sudoku-Solver",
+      language: ["JavaScript (React)", "TailwindCSS"],
     },
     {
       id: 10,
-      title: 'Diff-Checker',
+      title: "Diff-Checker",
       img: IMG10,
-      link: 'https://dhawal-pandya.github.io/Diff-Checker/',
-      github: 'https://github.com/dhawal-pandya/Diff-Checker',
-      language: ['JavaScript (React)', 'TailwindCSS'],
+      link: "https://dhawal-pandya.github.io/Diff-Checker/",
+      github: "https://github.com/dhawal-pandya/Diff-Checker",
+      language: ["JavaScript (React)", "TailwindCSS"],
     },
     {
       id: 11,
-      title: 'Number-Convertor',
+      title: "Number-Convertor",
       img: IMG11,
-      link: 'https://dhawal-pandya.github.io/Number-Convertor/',
-      github: 'https://github.com/dhawal-pandya/Number-Convertor',
-      language: ['JavaScript (React)', 'TailwindCSS'],
+      link: "https://dhawal-pandya.github.io/Number-Convertor/",
+      github: "https://github.com/dhawal-pandya/Number-Convertor",
+      language: ["JavaScript (React)", "TailwindCSS"],
     },
     {
       id: 12,
       img: IMG12,
-      language: ['And so many more...'],
+      language: ["And so many more..."],
     },
   ];
-  
 
   return (
-    <section id='portfolio'>
+    <section id="portfolio">
       <h5>My recent work is this</h5>
       <h2>Portfolio</h2>
 
-      <div className='container portfolio__container'>
+      <div className="container mx-auto grid grid-cols-1 gap-10 text-center md:grid-cols-2 lg:grid-cols-3">
         {soloProjects.map((proj) => (
-          <article className='portfolio__item' key={proj.id}>
-            <div className='portfolio__item-image'>
-              <img src={proj.img} alt={proj.title} />
+          <article
+            key={proj.id}
+            className="flex h-[30rem] flex-col justify-between rounded-3xl border border-transparent bg-[#2c2c6c] p-5 transition-all duration-400 ease-in-out hover:border-[#5fb8f8] hover:bg-transparent"
+          >
+            <div className="h-1/2 overflow-hidden rounded-2xl">
+              <img
+                src={proj.img}
+                alt={proj.title}
+                className="h-full w-full object-cover"
+              />
             </div>
-          <div className='portfolio__item-info'>
-            <h3>{proj.title}</h3>
-            { proj.language ? <h4 className='portfolio__languages'>
-              {proj.language.join(', ')}
-            </h4> :null}
-            <div className='portfolio__item-cta'>
-             {proj.github? <a
-                href={proj.github}
-                target='_blank'
-                rel='noreferrer'
-                className='btn'
-                >
-                Code
-              </a>:null}
-              { proj.link ? <a
-                href={proj.link}
-                target='_blank'
-                rel='noreferrer'
-                className='btn btn-primary'
-                >
-                Demo
-              </a> : null}
+            <div className="flex flex-col items-center">
+              <h3 className="text-2xl">{proj.title}</h3>
+              {proj.language && (
+                <h4 className="mb-5 font-light italic opacity-50">
+                  {proj.language.join(", ")}
+                </h4>
+              )}
+              <div className="mb-4 flex justify-center gap-4 text-center">
+                {proj.github && (
+                  <a
+                    href={proj.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn"
+                  >
+                    Code
+                  </a>
+                )}
+                {proj.link && (
+                  <a
+                    href={proj.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-primary"
+                  >
+                    Demo
+                  </a>
+                )}
+              </div>
             </div>
-                </div>
           </article>
         ))}
       </div>
