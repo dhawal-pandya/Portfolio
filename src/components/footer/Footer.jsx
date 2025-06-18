@@ -1,8 +1,6 @@
 import React from "react";
-
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub, FaTwitter } from "react-icons/fa";
-
 import IMG1 from "../../assets/footer.png";
 
 const Footer = () => {

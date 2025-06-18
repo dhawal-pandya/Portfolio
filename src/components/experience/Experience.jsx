@@ -1,39 +1,9 @@
 import React from "react";
 import { BsFillPatchCheckFill } from "react-icons/bs";
+import data from "../../data.json";
 
 const Experience = () => {
-  const experiences = [
-    {
-      title: "Front-end Base",
-      skills: ["HTML", "CSS", "JavaScript", "TypeScript"],
-    },
-    {
-      title: "Front-end Framework",
-      skills: [
-        "BootStrap",
-        "TailwindCSS",
-        "Styled Components",
-        "ReactJS",
-        "NextJS",
-      ],
-    },
-    {
-      title: "Back-end Base",
-      skills: ["Golang", "Java", "Python", "NodeJS", "SQL"],
-    },
-    {
-      title: "Back-end Framework",
-      skills: ["Mux", "SpringBoot", "Flask", "Express", "MySQL", "PostgreSQL"],
-    },
-    {
-      title: "Testing",
-      skills: ["Go Test", "Jest", "React Testing Library"],
-    },
-    {
-      title: "Tools",
-      skills: ["Linux/Unix", "CLI", "Git/Github", "Visual Studio Code"],
-    },
-  ];
+  const { experiences } = data;
 
   return (
     <section id="experience">

@@ -1,6 +1,5 @@
 import React from "react";
 import CTA from "./CTA";
-
 import ScrambledText from "./ScrambledText";
 
 const Header = () => {

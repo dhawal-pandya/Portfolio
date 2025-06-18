@@ -1,38 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
+import data from "../../data.json";
 
-const workExperience = [
-  {
-    company: "Razorpay",
-    title: "Product Development Engineer",
-    duration: "July 2024 - Present",
-    points: [
-      "Part of the core Cards and Recurring Infra team at MandateHQ, a system enabling creation of mandates for recurring payments (e.g., subscriptions for services like Netflix) which handles a traffic volume of 50k/min",
-      "Integrated credit card mandate creation in MandateHQ for recurring payments for multiple banks",
-      "Took complete ownership and fully integrated Rupay cards for mandates",
-      "Led cross-team collaboration to streamline mandate processing and ensure compliance with payments Infrastructure for integration of different networks (Visa, MasterCard, Rupay)",
-      "Implemented multi-architecture support (arm64/amd64) for key applications across 4 subsystems",
-      "Utilised cross-compilation instead of emulation which resulted in a reduced build time for our code by 84%",
-      "Indexed high-usage databases based on logs, reducing DB response time from 200ms down to 50ms",
-      "Fixed 30+ vulnerabilities by updating packages and modifying modules to meet PCI DSS standards.",
-      "Developed a Prometheus-based dashboard for API tracking for latencies and traffic, enabling failure tracking and real-time alerts.",
-      "Optimised API Gateway for improved traffic handling and better performance",
-      "Part of the core team managing mandates with on-call responsibilities and using tools like Spinnaker, Coralogix and Zenduty",
-    ],
-  },
-  {
-    company: "Neweb Labs",
-    title: "Full-Stack Developer",
-    duration: "April 2023 - June 2024",
-    points: [
-      "Coding, debugging, refactoring and maintaining code-base for Go and Java based REST API backend services deployed in production environment",
-      "Improved system workflow to be optimised for paid and unpaid video streaming, with the relevant security measures, reducing latencies to 120ms",
-      "Wrote 6 core and 5 auxiliary microservices from scratch and took responsibility for seeing it through to completion with its Frontend Applications as well",
-      "Integrated Payment Gateways, Stripe and RazorPay into the platform using their SDK and writing custom functions wherever required, which significantly contributed to monetization efforts and increased company revenue",
-      "Wrote a low-latency, high-performance media delivery system using AWS S3, optimising performance for large-scale video streaming",
-      "Also participated in discussions including selection of suitable technologies for frontend, backend or a DBMS",
-    ],
-  },
-];
+const { workExperience } = data;
 
 const JobPoint = ({ point }) => {
   const [isVisible, setIsVisible] = useState(false);

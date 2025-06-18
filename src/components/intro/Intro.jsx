@@ -55,7 +55,7 @@ const Intro = ({ toggleWorkExperience, isWorkExperienceVisible }) => {
             project, I invite you to click on the button below and start a
             conversation with me.
           </p>
-          <div className="flex gap-4">
+          <div className="flex justify-center gap-4 md:justify-start">
             <a href="#contact" className="btn btn-primary">
               Let's Talk
             </a>

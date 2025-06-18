@@ -37,7 +37,7 @@ const Contact = () => {
           <article className="h-44 rounded-2xl border border-transparent bg-[#2c2c6c] p-5 text-center transition-all duration-400 ease-in-out hover:border-[#4db5ff66] hover:bg-transparent">
             <MdOutlineEmail className="mx-auto mb-2 text-2xl" />
             <h4 className="text-[87%] font-medium opacity-80">Email</h4>
-            <h4 className="text-[87%] font-medium opacity-80">
+            <h4 className="break-words text-[87%] font-medium opacity-80">
               dhawalpandya.01@gmail.com
             </h4>
             <a
