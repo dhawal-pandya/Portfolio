@@ -55,7 +55,10 @@ const Footer = () => {
         <small>Made with ❤️ by Dhawal Pandya</small>
       </div>
       <div className="relative mx-auto w-3/4 sm:w-1/2">
-        <img src={IMG1} alt="footerimage" />
+        <img
+          src="https://raw.githubusercontent.com/dhawal-pandya/Portfolio/master/src/assets/footer.png"
+          alt="footerimage"
+        />
       </div>
     </footer>
   );

@@ -1,7 +1,6 @@
 import React from "react";
 // import { FaAward } from 'react-icons/fa';
 import { VscFolderLibrary } from "react-icons/vsc";
-import ME from "../../assets/me.png";
 
 const Intro = ({ toggleWorkExperience, isWorkExperienceVisible }) => {
   return (
@@ -11,7 +10,11 @@ const Intro = ({ toggleWorkExperience, isWorkExperienceVisible }) => {
       <div className="container mx-auto grid grid-cols-1 gap-0 md:grid-cols-[35%_50%] md:gap-[15%]">
         <div className="mx-auto my-8 grid w-1/2 aspect-square place-items-center rounded-full bg-gradient-to-r from-transparent via-[#5fb8f8] to-transparent md:my-0 md:w-full">
           <div className="h-full w-full overflow-hidden rounded-full transition-transform duration-400 ease-in-out hover:scale-125">
-            <img src={ME} alt="me" className="h-full w-full object-cover" />
+            <img
+              src="https://raw.githubusercontent.com/dhawal-pandya/Portfolio/master/src/assets/me.png"
+              alt="me"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
         <div className="text-center md:text-left">
