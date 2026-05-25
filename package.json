@@ -25,7 +25,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "bash scripts/deploy.sh"
+    "deploy": "bash scripts/deploy.sh",
+    "setup": "cp scripts/post-commit.sh .git/hooks/post-commit && chmod +x .git/hooks/post-commit && echo 'post-commit hook installed'"
   },
   "eslintConfig": {
     "extends": [
