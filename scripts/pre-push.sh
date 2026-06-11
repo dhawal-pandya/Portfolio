@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #
-# post-push hook — auto-deploy to GitHub Pages after every push to master
+# pre-push hook — auto-deploy to GitHub Pages on every push to master
 #
 # SETUP (run once per machine):
-#   cp scripts/post-push.sh .git/hooks/post-push
-#   chmod +x .git/hooks/post-push
+#   cp scripts/pre-push.sh .git/hooks/pre-push
+#   chmod +x .git/hooks/pre-push
 #
 # Git hooks live in .git/hooks/ which is not tracked, so this file is the
 # source of truth. Copy it into .git/hooks/ on any new machine to activate.
@@ -34,4 +34,4 @@ fi
 
 echo ""
 echo "🚀  Deploying to GitHub Pages..."
-npm run deploy
+npm run deploy || true  # never block the push if deploy fails
