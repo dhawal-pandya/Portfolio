@@ -19,7 +19,7 @@
   ],
   "resize": [
     "I tested this layout on every width except the one you just found.",
-    "responsive design, they said. it builds character, they said."
+    "build responsive design, they said. it builds character, they said."
   ],
   "copy": [
     "take it. I took most of my best lines from better books.",
@@ -29,25 +29,19 @@
     "the cells kept living while you were gone. none of them noticed.",
     "welcome back. nothing here waited."
   ],
-  "idle": [
-    "I was not waiting. the page, however, never stopped."
-  ],
-  "print": [
-    "pressing a turning world onto dead trees. bold."
-  ],
+  "idle": ["I was not waiting. the page, however, never stopped."],
+  "print": ["pressing a turning world onto dead trees. bold."],
   "name": [
     "still my name. I checked.",
     "yes, both of those are real words. ask my village."
   ],
   "snake": [
-    "it plays itself. there is a way in, but it is smaller than you think.",
-    "it has died many times. it keeps its own counsel about it."
+    "it plays itself. there is a way in, but can you find it.",
+    "the snake has died many times, still it keeps going..."
   ],
   "paper": [
     "careful. paper tears.",
     "that was the last one. the rest are still being lived."
   ],
-  "contact": [
-    "go on. the first line is the hardest, I would know."
-  ]
+  "contact": ["go on. the first line is the hardest, I would know."]
 }

@@ -5,18 +5,37 @@
   "linkedin": "https://www.linkedin.com/in/dhawal-pandya/",
   "blog": "https://dhawalpandya01.hashnode.dev/",
   "heroKicker": "namaste, I am",
-  "heroLine": "I build the machinery under money, and I watch everything run.",
+  "heroLine": "I build the mechanisms under money, and I watch everything run.",
   "heroLineNight": "O night, please don't end.",
-  "roles": ["backend engineer", "recovering chemist", "reader", "tea drinker"],
+  "roles": [
+    "software engineer",
+    "backend engineer",
+    "recovering chemist",
+    "reader",
+    "tea drinker",
+    "coffee drinker",
+    "yogi",
+    "problem solver"
+  ],
   "about": {
-    "epigraph": "I could read.",
-    "epigraphSource": "Study of Time",
+    "epigraph": "यतः कृष्णस्ततो धर्मो यतो धर्मस्ततो जयः ॥",
+    "epigraphSource": "Mahabharat",
     "paragraphs": [
-      "The first true thing I can say about myself is that I could read. Everything else followed from that. A chemistry degree, chosen because it made me feel like a wizard. Four years and three attempts at a thing that did not work out. Then, on the first of January 2022, a hundred-day plan into code, and the discovery that the foundations of existence were written in it.",
-      "Now I build the machinery under money for a living. I work from Valsad, the town I grew up in, near a beach with black sand, with the ocean for a screensaver. I read more than is useful. I build small games nobody asked for. The cells living and dying behind these pages do not need you to look at them.",
-      "I look at them anyway."
+      "I did not start in software.",
+
+      "I studied Chemistry, drawn to it by the same instinct that later pulled me toward engineering: a desire to understand how complex systems work beneath the surface. After graduating, I spent several years preparing for the UPSC examination. Those years taught me discipline, consistency, and how to tackle large bodies of knowledge, but they also clarified that my interests lay elsewhere.",
+
+      "On January 1st, 2022, I committed to a hundred-day plan to learn programming. What began as an experiment quickly became an obsession. Programming combined everything I enjoyed: problem-solving, systems thinking, and the ability to build things from first principles. The deeper I went, the more I realized that modern life runs on software, and that understanding code meant understanding the machinery behind much of the world.",
+
+      "Today, I work as a Software Engineer building financial infrastructure. My experience spans payment systems, recurring billing platforms, merchant onboarding, distributed systems, and AI-powered internal tools. I have worked across Golang, Java, Python, cloud infrastructure, databases, and large-scale backend systems, helping teams ship reliable products that operate at significant scale.",
+
+      "Outside of work, I read extensively, build side projects, and explore ideas through writing. I am particularly interested in distributed systems, artificial intelligence, complex adaptive systems, and the emergence of order from simple rules.",
+
+      "I grew up in Mumbai and have shifted to Tithal, Valsad, a coastal town in Gujarat, India. It is where I learned to read, where I learned to write code, and where I continue to build.",
+
+      "Let's talk."
     ],
-    "photoHold": "this photo took forty attempts. the code took less."
+    "photoHold": "this photo took about forty attempts. the code takes less."
   },
   "footer": "चिदानन्दरूपः शिवोऽहं शिवोऽहम्"
 }
