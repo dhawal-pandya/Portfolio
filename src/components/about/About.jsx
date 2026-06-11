@@ -37,7 +37,7 @@ const About = () => {
             src={me}
             alt="Dhawal Pandya"
             draggable="false"
-            className={`h-full w-full object-cover grayscale transition-all duration-300 hover:grayscale-0 ${
+            className={`h-full w-full object-cover transition-all duration-500 hover:scale-105 ${
               held ? "opacity-0" : "opacity-100"
             }`}
           />

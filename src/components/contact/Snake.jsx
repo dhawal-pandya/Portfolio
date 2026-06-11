@@ -12,6 +12,7 @@ function colors() {
   const cs = getComputedStyle(document.documentElement);
   return {
     body: cs.getPropertyValue("--sim").trim(),
+    bodyPlayer: cs.getPropertyValue("--ink").trim(),
     food: cs.getPropertyValue("--accent").trim(),
   };
 }
@@ -99,12 +100,12 @@ const Snake = () => {
     }
 
     ctx.clearRect(0, 0, w, h);
-    ctx.fillStyle = s.col.body;
+    ctx.fillStyle = s.player ? s.col.bodyPlayer : s.col.body;
     for (const [x, y] of s.snake) ctx.fillRect(x * CELL + 1, y * CELL + 1, CELL - 2, CELL - 2);
     // a second pass deepens the body so it reads above the page texture
     for (const [x, y] of s.snake) ctx.fillRect(x * CELL + 1, y * CELL + 1, CELL - 2, CELL - 2);
     if (s.food) {
-      ctx.globalAlpha = 0.45;
+      ctx.globalAlpha = s.player ? 0.9 : 0.45;
       ctx.fillStyle = s.col.food;
       ctx.beginPath();
       ctx.arc(s.food[0] * CELL + CELL / 2, s.food[1] * CELL + CELL / 2, CELL / 4, 0, Math.PI * 2);

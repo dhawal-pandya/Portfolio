@@ -4,6 +4,7 @@ import ScrambledText from "./ScrambledText";
 import PROFILE from "../../data/profile.json";
 import { quip } from "../../lib/quips";
 import { foundSecret } from "../../lib/secrets";
+import resumeUrl from "../../assets/Dhawal_Pandya_Resume.pdf";
 
 const Hero = () => {
   const [line, setLine] = useState(PROFILE.heroLine);
@@ -40,6 +41,9 @@ const Hero = () => {
             </a>
             <a href="#verses" className="link-quiet underline-offset-4 hover:underline">
               the verses ↓
+            </a>
+            <a href={resumeUrl} target="_blank" rel="noreferrer" className="link-quiet underline-offset-4 hover:underline">
+              the resume ↓
             </a>
           </div>
         </div>

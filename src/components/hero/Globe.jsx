@@ -9,10 +9,7 @@ import LAND from "../../data/globe-points.json";
 // Drag spins it. It spins anyway.
 
 const MARKERS = [
-  { lat: 20.61, lon: 72.93 }, // Valsad
-  { lat: 21.17, lon: 72.83 }, // Surat
-  { lat: 18.52, lon: 73.86 }, // Pune
-  { lat: 12.97, lon: 77.59 }, // Bengaluru
+  { lat: 20.61, lon: 72.93 }, // Valsad — here, right now
 ];
 
 const D2R = Math.PI / 180;
@@ -132,11 +129,13 @@ const Globe = ({ className = "" }) => {
     const R = Math.min(w, h) / 2 - 8;
     const cx = w / 2;
     const cy = h / 2;
-    const tilt = -0.32;
+    // Side view: equatorial belt runs straight across. Earth's 23.5° axial tilt
+    // is applied as a 2D in-plane rotation so the pole tilts right on screen.
+    const AX = 23.5 * D2R;
     const cosT = Math.cos(s.theta);
     const sinT = Math.sin(s.theta);
-    const cosX = Math.cos(tilt);
-    const sinX = Math.sin(tilt);
+    const cosA = Math.cos(AX);
+    const sinA = Math.sin(AX);
     const [sx, sy, sz] = s.sun;
 
     // Sphere edge, barely there.
@@ -151,13 +150,15 @@ const Globe = ({ className = "" }) => {
       const [x, y, z] = POINTS[i];
       const x1 = x * cosT + z * sinT;
       const z1 = -x * sinT + z * cosT;
-      const y2 = y * cosX - z1 * sinX;
-      const z2 = y * sinX + z1 * cosX;
-      if (z2 <= 0.02) continue;
+      // tilt = 0: equatorial side view. Cull back hemisphere on z1.
+      if (z1 <= 0.02) continue;
+      // In-plane axial tilt: clockwise 23.5° so north pole tips right.
+      const xa = x1 * cosA + y * sinA;
+      const ya = -x1 * sinA + y * cosA;
       const lit = x * sx + y * sy + z * sz; // earth-fixed daylight
-      const px = cx - x1 * R; // east on the right, as on any honest globe
-      const py = cy - y2 * R;
-      const depth = 0.45 + 0.55 * z2;
+      const px = cx - xa * R;
+      const py = cy - ya * R;
+      const depth = 0.45 + 0.55 * z1;
       if (Math.abs(lit) < 0.06) {
         // the terminator itself, one warm thread
         ctx.globalAlpha = 0.85 * depth;
@@ -170,7 +171,7 @@ const Globe = ({ className = "" }) => {
         ctx.fillStyle = s.colors.soft;
       }
       ctx.beginPath();
-      ctx.arc(px, py, dotR * (0.7 + 0.5 * z2), 0, Math.PI * 2);
+      ctx.arc(px, py, dotR * (0.7 + 0.5 * z1), 0, Math.PI * 2);
       ctx.fill();
     }
 
@@ -179,11 +180,11 @@ const Globe = ({ className = "" }) => {
       const [x, y, z] = MARKER_VECS[i];
       const x1 = x * cosT + z * sinT;
       const z1 = -x * sinT + z * cosT;
-      const y2 = y * cosX - z1 * sinX;
-      const z2 = y * sinX + z1 * cosX;
-      if (z2 <= 0) continue;
-      const px = cx - x1 * R;
-      const py = cy - y2 * R;
+      if (z1 <= 0) continue;
+      const xa = x1 * cosA + y * sinA;
+      const ya = -x1 * sinA + y * cosA;
+      const px = cx - xa * R;
+      const py = cy - ya * R;
       ctx.globalAlpha = 0.95;
       ctx.fillStyle = s.colors.accent;
       ctx.beginPath();
