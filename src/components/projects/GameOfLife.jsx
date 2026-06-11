@@ -5,7 +5,7 @@ import useCanvasLoop from "../../lib/useCanvasLoop";
 // Moving the pointer over the section births cells. None of this is explained.
 
 const CELL = 18;
-const TICK = 0.45;
+const TICK = 0.15;
 
 const GUN = [
   [5, 1], [5, 2], [6, 1], [6, 2], [5, 11], [6, 11], [7, 11], [4, 12], [8, 12],
