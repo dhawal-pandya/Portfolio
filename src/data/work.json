@@ -1,0 +1,58 @@
+{
+  "epigraph": "Chaos is spontaneous and happens without any effort, but Order comes at a cost.",
+  "epigraphSource": "Study of Time",
+  "jobs": [
+    {
+      "company": "Bolt",
+      "title": "Software Engineer",
+      "span": "Dec 2025 — present",
+      "place": "remote, from Valsad",
+      "points": [
+        "Core contributor on the merchant experience team, rebuilding merchant onboarding from scratch and cutting support tickets by up to 70%",
+        "Led the design of a self-serve merchant onboarding system, reducing ops dependency and raising activation throughput",
+        "Built a merchant-scoped AI support agent for the help center, with guardrails and tool-calling APIs for secure real-time retrieval"
+      ],
+      "more": [
+        "Architected and owned a draft-preview-publish configuration workflow across environments, making merchant-side config changes safe",
+        "Owned critical checkout flows, resolving high-impact merchant and payment reliability issues",
+        "Designed backend APIs for agent tool use with strict merchant-level data isolation"
+      ]
+    },
+    {
+      "company": "Razorpay",
+      "title": "Product Development Engineer",
+      "span": "Jul 2024 — Oct 2025",
+      "place": "Pune",
+      "points": [
+        "Led the core Cards and Recurring Infra team at MandateHQ, building mandate creation for recurring payments at 50k/hr in Golang and Java",
+        "Led multi-network recurring payment integrations across Visa, Mastercard, and RuPay",
+        "Indexed high-usage databases from logs, cutting DB response time from 200ms to 50ms"
+      ],
+      "more": [
+        "Swapped emulation for cross-compilation, cutting build times by 84%",
+        "Fixed 30+ vulnerabilities to meet PCI DSS standards",
+        "Built Prometheus dashboards for API latencies and traffic; carried on-call with Spinnaker, Coralogix, and Zenduty",
+        "Single-handedly built an internal GenAI chatbot letting business teams query MandateHQ data in plain language"
+      ]
+    },
+    {
+      "company": "Neweb Labs",
+      "title": "Full-Stack Developer",
+      "span": "Apr 2023 — Jun 2024",
+      "place": "Bengaluru, employee no. 1",
+      "points": [
+        "Cut video delivery latency to 120ms by redesigning secure media workflows on AWS S3",
+        "Wrote six core and five auxiliary microservices from scratch, and their frontends",
+        "Integrated Stripe and Razorpay payments, directly feeding platform monetization"
+      ],
+      "more": []
+    }
+  ],
+  "skills": [
+    { "group": "backend", "items": ["Golang", "Java", "Python", "SpringBoot", "Node.js"] },
+    { "group": "frontend", "items": ["React", "Next.js", "Angular"] },
+    { "group": "data", "items": ["PostgreSQL", "MongoDB", "Redis", "Kafka"] },
+    { "group": "infra", "items": ["AWS", "GCP", "Docker", "Kubernetes", "CI/CD"] },
+    { "group": "ai", "items": ["LLMs", "RAG", "agents", "MLOps"] }
+  ]
+}

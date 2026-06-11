@@ -1,0 +1,22 @@
+{
+  "name": "Dhawal Pandya",
+  "email": "dhawalpandya.01@gmail.com",
+  "github": "https://github.com/dhawal-pandya",
+  "linkedin": "https://www.linkedin.com/in/dhawal-pandya/",
+  "blog": "https://dhawalpandya01.hashnode.dev/",
+  "heroKicker": "namaste, I am",
+  "heroLine": "I build the machinery under money, and I watch everything run.",
+  "heroLineNight": "O night, please don't end.",
+  "roles": ["backend engineer", "recovering chemist", "reader", "tea drinker"],
+  "about": {
+    "epigraph": "I could read.",
+    "epigraphSource": "Study of Time",
+    "paragraphs": [
+      "The first true thing I can say about myself is that I could read. Everything else followed from that. A chemistry degree, chosen because it made me feel like a wizard. Four years and three attempts at a thing that did not work out. Then, on the first of January 2022, a hundred-day plan into code, and the discovery that the foundations of existence were written in it.",
+      "Now I build the machinery under money for a living. I work from Valsad, the town I grew up in, near a beach with black sand, with the ocean for a screensaver. I read more than is useful. I build small games nobody asked for. The cells living and dying behind these pages do not need you to look at them.",
+      "I look at them anyway."
+    ],
+    "photoHold": "this photo took forty attempts. the code took less."
+  },
+  "footer": "चिदानन्दरूपः शिवोऽहं शिवोऽहम्"
+}

@@ -1,59 +1,45 @@
-# Personal-Portfolio
+# dhawal-pandya.github.io
 
-> This is personal portfolio website.
+The personal site of Dhawal Pandya. A single page that keeps running whether or
+not anyone is watching: the globe turns with the actual sun, cells live and die
+behind the projects, a snake plays itself behind the contact lines, and the
+poems are printed on paper that matches their nature.
 
-![Portfolio](https://raw.github.com/dhawal-pandya/portfolio/master/src/assets/portfolio.png)
+Built with React, Vite, and Tailwind. Design and architecture notes live in
+[REWRITE_PLAN.md](REWRITE_PLAN.md); read it before changing anything structural.
 
-## Built With
+## Develop
 
-- ReactJS
+```
+npm install
+npm run dev        # local dev server
+npm run build      # production build to dist/
+npm run deploy     # build + push to both GitHub Pages targets
+npm run setup      # install the post-commit hook
+```
 
-## Deployment
+## Editing content (no code required)
 
-- [View Deployment](https://dhawal-pandya.github.io)
+All copy and data live in `src/data/`:
 
-# Getting Started
+| file | what it holds |
+|---|---|
+| `profile.json` | name, links, hero lines, about copy, closing words |
+| `work.json` | jobs, bullet points, skills |
+| `projects.json` | the project list and one-liners |
+| `poems.json` | the verses; see [src/data/POEMS_README.md](src/data/POEMS_README.md) before adding one |
+| `quips.json` | the one-liners the page says when you do something odd |
+| `terminal.json` | everything the terminal says |
 
-## Prerequisites:
+`src/data/globe-points.json` is generated; regenerate with `npm run globe-data`.
 
-- Create an account on github.
+## The quiet parts
 
-- Install gitbash or use git on the command line.
-
-- Use an IDE of your preference such as VScode.
-
-## Steps to follow:
-
-- Choose a folder in your local machine where you want this repository to be copied
-
-- Clone this [repository](https://github.com/dhawal-pandya/Portfolio) to your local machine
-- ```
-  git clone git@github.com:dhawal-pandya/portfolio---react.git
-  ```
-
-- Navigate to `cd portfolio` directory.
-
-- To install all the app dependencies on the command line run
-- ```
-  npm install
-  ```
-- To run app in the development mode run
-- ```
-  npm run dev
-  ```
+There is a terminal. There are seven secrets. The console knows one of them.
+None of them are documented here on purpose.
 
 ## Author
 
-**Dhawal Pandya**
-
-- [GitHub](https://github.com/dhawal-pandya)
-- [LinkedIn](https://www.linkedin.com/in/dhawal-pandya/)
-
-# Show your support
-
-Give a ⭐ if you like this project!
-
-# Acknowledgments
-
-Thanks to [EGATOR](https://www.youtube.com/watch?v=G-Cr00UYokU&list=WL&index=55&t=1845s) tutotial!
-Also thanks to [Meri Gogichashvili](https://github.com/Meri-MG/)
+**Dhawal Pandya** — [GitHub](https://github.com/dhawal-pandya) ·
+[LinkedIn](https://www.linkedin.com/in/dhawal-pandya/) ·
+[blog](https://dhawalpandya01.hashnode.dev/)

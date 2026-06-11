@@ -1,8 +1,38 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@100;300;700;900&display=swap");
+@import "@fontsource-variable/fraunces";
+@import "@fontsource-variable/fraunces/wght-italic.css";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jetbrains-mono";
+@import "@fontsource-variable/noto-serif-devanagari";
+@import "@fontsource/eb-garamond";
+@import "@fontsource/eb-garamond/400-italic.css";
+@import "@fontsource/kalam";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root,
+[data-theme="day"] {
+  --bg: #f7f4ee;
+  --bg-soft: #efeae0;
+  --ink: #20201d;
+  --ink-soft: #6b675e;
+  --accent: #c2540a;
+  --line: #e0dacd;
+  --sim: rgba(32, 32, 29, 0.07);
+  color-scheme: light;
+}
+
+[data-theme="night"] {
+  --bg: #0a0b12;
+  --bg-soft: #11131d;
+  --ink: #e6e4dd;
+  --ink-soft: #8d8a81;
+  --accent: #e8730f;
+  --line: #1f2230;
+  --sim: rgba(230, 228, 221, 0.07);
+  color-scheme: dark;
+}
 
 @layer base {
   html {
@@ -10,88 +40,56 @@
   }
 
   body {
-    @apply bg-color-bg font-montserrat text-color-white;
+    @apply bg-bg font-body text-ink antialiased;
     line-height: 1.7;
-    background-image: url(../src/assets/bg-texture.png);
+    transition: background-color 600ms ease, color 600ms ease;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-medium;
-  }
-
-  section {
-    @apply mt-32;
-  }
-
-  section > h2,
-  section > h5 {
-    @apply text-center text-color-light;
-  }
-
-  section > h2 {
-    @apply mb-12 text-color-primary;
-  }
-
-  .text-light {
-    @apply text-color-primary;
+  ::selection {
+    background: var(--accent);
+    color: var(--bg);
   }
 
   a {
-    @apply text-color-primary transition-all duration-400 ease-in-out;
+    @apply transition-colors duration-200;
   }
 
-  a:hover {
-    @apply text-color-white;
-  }
-
-  .btn {
-    @apply inline-block w-max cursor-pointer rounded-md border border-solid border-color-primary px-5 py-3 transition-all duration-400 ease-in-out;
-  }
-
-  .btn:hover {
-    @apply border-transparent bg-color-white text-color-bg;
-  }
-
-  .btn-primary {
-    @apply bg-color-primary text-color-bg;
-  }
-
-  img {
-    @apply block w-full object-cover;
-  }
-
-  .container {
-    @apply w-[75%] md:w-[86%] sm:w-[90%];
+  :focus-visible {
+    outline: 1px solid var(--accent);
+    outline-offset: 3px;
   }
 }
 
-.experience-timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+@layer components {
+  .hairline {
+    border-color: var(--line);
+  }
+
+  .link-quiet {
+    @apply text-ink-soft hover:text-accent;
+  }
 }
 
-.experience-item {
-  border-left: 2px solid #5fb8f8;
-  padding-left: 1rem;
+/* The custom cursor hides the native one only on precise pointers. */
+@media (pointer: fine) {
+  body[data-cursor-on] {
+    cursor: none;
+  }
+  body[data-cursor-on] a,
+  body[data-cursor-on] button,
+  body[data-cursor-on] [role="button"] {
+    cursor: none;
+  }
 }
 
-.experience-date {
-  font-size: 0.8rem;
-  color: #a0aec0;
-}
-
-.experience-company {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-.swiper-pagination-clickable .swiper-pagination-bullet {
-  cursor: pointer;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -2,20 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://raw.githubusercontent.com/dhawal-pandya/Portfolio/master/public/dot.png"
-    />
+    <link rel="icon" type="image/png" href="./dot.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio site of Dhawal Pandya" />
+    <meta
+      name="description"
+      content="Dhawal Pandya — software engineer. The world keeps turning either way."
+    />
     <title>Dhawal Pandya</title>
-    <style>
-      * {
-        font-family: "Montserrat", sans-serif;
-        margin: 0;
-      }
-    </style>
+    <script>
+      // Set the theme before paint. Day and night are times, not preferences:
+      // unless overridden, the page follows the visitor's actual sun.
+      (function () {
+        var t;
+        try {
+          t = new URLSearchParams(location.search).get("theme");
+          if (t !== "day" && t !== "night")
+            t = localStorage.getItem("kc-theme-override");
+        } catch (e) {}
+        if (t !== "day" && t !== "night") {
+          var now = new Date();
+          var start = Date.UTC(now.getUTCFullYear(), 0, 1);
+          var doy = (now.getTime() - start) / 864e5;
+          var decl =
+            ((-23.44 * Math.cos((2 * Math.PI * (doy + 10)) / 365.24)) *
+              Math.PI) /
+            180;
+          var utcH =
+            now.getUTCHours() +
+            now.getUTCMinutes() / 60 +
+            now.getUTCSeconds() / 3600;
+          var subLon = (((12 - utcH) * 15) * Math.PI) / 180;
+          var lon = ((-now.getTimezoneOffset() / 60) * 15 * Math.PI) / 180;
+          var lat = (21 * Math.PI) / 180;
+          var cosZ =
+            Math.sin(lat) * Math.sin(decl) +
+            Math.cos(lat) * Math.cos(decl) * Math.cos(lon - subLon);
+          t = cosZ > -0.05 ? "day" : "night";
+        }
+        document.documentElement.dataset.theme = t;
+      })();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
