@@ -2,13 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import T from "../../data/terminal.json";
 import POEMS from "../../data/poems.json";
 import PROFILE from "../../data/profile.json";
-import { foundSecret, secretCount } from "../../lib/secrets";
-import { setOverride, followSun } from "../../lib/theme";
-import resumeUrl from "../../assets/Dhawal_Pandya_Resume.pdf";
+import { foundSecret, secretCount, foundIds, SECRET_IDS } from "../../lib/secrets";
 
 // Press ` anywhere. The page has a back door, and the back door has manners.
 
 let unknownIdx = 0;
+let hintIdx = 0;
 
 const Terminal = ({ onKanban }) => {
   const [open, setOpen] = useState(false);
@@ -58,7 +57,9 @@ const Terminal = ({ onKanban }) => {
     const cmd = raw.trim();
     if (!cmd) return;
     print(`❯ ${cmd}`, "in");
-    const [head, ...rest] = cmd.toLowerCase().split(/\s+/);
+    const [h0, ...rest] = cmd.toLowerCase().split(/\s+/);
+    // `work`, `work/` and `/work` all walk the same way
+    const head = h0.replace(/^\/+|\/+$/g, "") || h0;
     const arg = rest.join(" ");
 
     switch (head) {
@@ -70,18 +71,6 @@ const Terminal = ({ onKanban }) => {
         break;
       case "ls":
         print(arg === ".secrets" || arg === "secrets" ? T.lsSecrets : T.ls);
-        break;
-      case "cat":
-        if (arg === "resume") {
-          window.open(resumeUrl, "_blank");
-          print("opening the PDF.");
-        } else if (arg === "about") {
-          PROFILE.about.paragraphs.forEach((p) => print(p));
-        } else if (arg === ".secrets" || arg === "secrets") {
-          print(T.lsSecrets);
-        } else {
-          print(`no such file: ${arg || "(nothing)"}`);
-        }
         break;
       case "blog":
         window.open(PROFILE.blog, "_blank");
@@ -101,22 +90,17 @@ const Terminal = ({ onKanban }) => {
           }
         }
         break;
-      case "globe": {
-        const i = Math.floor(Math.random() * T.globeLines.length);
-        window.dispatchEvent(new CustomEvent("kc-globe-spin", { detail: { index: i } }));
-        print(T.globeLines[i]);
+      // the ls listing is walkable, except the one place it isn't
+      case "work":
+      case "projects":
+      case "verses":
+      case "contact":
+        document.getElementById(head)?.scrollIntoView({ behavior: "smooth" });
+        print(T.goto);
+        setOpen(false);
         break;
-      }
-      case "theme":
-        if (arg === "day" || arg === "night") {
-          setOverride(arg);
-          print(T.themeSet[arg]);
-        } else if (arg === "sun") {
-          followSun();
-          print(T.themeSet.sun);
-        } else {
-          print("theme day | night | sun");
-        }
+      case ".secrets":
+        print(T.lsSecrets);
         break;
       case "snake":
         window.dispatchEvent(new CustomEvent("kc-snake-play"));
@@ -137,6 +121,25 @@ const Terminal = ({ onKanban }) => {
         foundSecret("tathastu");
         print(T.tathastu);
         break;
+      // the words that work out there work in here too
+      case "hesoyam":
+      case "sakshi":
+      case "chai":
+        window.dispatchEvent(new CustomEvent("kc-word", { detail: { word: head } }));
+        print(T.wordAck[head]);
+        break;
+      // never advertised. you have to ask.
+      case "hint":
+      case "hints":
+      case "clue":
+      case "clues":
+      case "tip":
+      case "tips": {
+        const found = foundIds();
+        const missing = SECRET_IDS.filter((id) => id !== "terminal" && !found.includes(id));
+        print(missing.length ? T.hints[missing[hintIdx++ % missing.length]] : T.hints.done);
+        break;
+      }
       case "secrets": {
         const { found, total } = secretCount();
         print(`${found} of ${total}.`);

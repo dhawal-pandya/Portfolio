@@ -100,6 +100,16 @@ const Snake = () => {
     }
 
     ctx.clearRect(0, 0, w, h);
+    if (s.player) {
+      // the walls only matter when it is you who can hit them
+      const bw = s.cols * CELL;
+      const bh = s.rows * CELL;
+      ctx.strokeStyle = s.col.food;
+      ctx.globalAlpha = 0.6;
+      ctx.lineWidth = 2;
+      ctx.strokeRect(1, 1, bw - 2, bh - 2);
+      ctx.globalAlpha = 1;
+    }
     ctx.fillStyle = s.player ? s.col.bodyPlayer : s.col.body;
     for (const [x, y] of s.snake) ctx.fillRect(x * CELL + 1, y * CELL + 1, CELL - 2, CELL - 2);
     // a second pass deepens the body so it reads above the page texture

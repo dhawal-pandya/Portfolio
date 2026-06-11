@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import PROFILE from "../../data/profile.json";
-import { foundSecret } from "../../lib/secrets";
 
-// One word. Click it seven times and see.
+// One line. Click it seven times and see. This is the door, not a secret:
+// the seventh secret merely tells you the door exists.
 const Footer = () => {
   const clicks = useRef([]);
 
@@ -11,7 +11,6 @@ const Footer = () => {
     clicks.current = [...clicks.current.filter((t) => now - t < 6000), now];
     if (clicks.current.length >= 7) {
       clicks.current = [];
-      foundSecret("ash");
       window.location.hash = "#/ash";
     }
   };

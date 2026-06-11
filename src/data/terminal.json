@@ -1,16 +1,10 @@
 {
   "greeting": "a terminal. of course there is. ask for what you need.",
   "help": [
-    "help          ",
     "whoami        ",
-    "ls            -> what is here",
-    "cat about     -> the long version about me",
-    "cat resume    -> the PDF, for the formal",
+    "ls            -> what is here. type a listing to walk there",
+    "poems         -> the verses, by name",
     "blog          -> just guess where it takes you",
-    "theme         -> day | night | sun. sun follows the actual sky",
-    "snake         -> take over the one in the back. arrows. esc to leave it",
-    "life          -> reseed the cells in the Game of Life",
-    "kanban        -> an old board I never finished. fitting",
     "secrets       -> how many you have found. not which",
     "clear         -> wipe this",
     "exit          -> close. ` reopens"
@@ -18,25 +12,29 @@
   "whoami": "dhawal. software engineer, problem solver",
   "ls": "work/  projects/  verses/  contact/  .secrets",
   "lsSecrets": "permission denied. obviously.",
+  "goto": "walking.",
   "unknown": [
     "not a command. I respect the attempt.",
     "no. but type `help` and we can pretend this went well.",
     "command not found. believe me, I know the feeling.",
     "I wrote every command in here and that is not one of them."
   ],
-  "globeLines": [
-    "Valsad. home. the office is a beach now.",
-    "Surat. the degree said chemistry. it meant wizardry.",
-    "Pune. seat C-32. the manager sat at C-31.",
-    "Bengaluru. employee number one of three."
-  ],
+  "hints": {
+    "hesoyam": "an old cheat from an old city in a game once played still works here.",
+    "stillness": "type the Sanskrit word for the one who only watches.",
+    "tathastu": "the browser console has been greeting you this whole time.",
+    "nightowl": "come back between midnight and four. the page keeps different company then.",
+    "photo": "hold memories in photographs, really hold them.",
+    "chai": "what drink that cannot be refused.",
+    "done": "nothing left to find other than nirvana nirvana nirvana nirvana nirvana nirvana nirvana...."
+  },
+  "wordAck": {
+    "hesoyam": "still works. some cities never close.",
+    "sakshi": "stillness, then.",
+    "chai": "the kettle is on."
+  },
   "tathastu": "so it is. you read consoles and follow instructions. rare combination.",
   "secretsAllFound": "all of them. there is nothing left to find here. there was never much, only a man and his machines.",
-  "themeSet": {
-    "day": "day, then.",
-    "night": "night, then.",
-    "sun": "back to the actual sky."
-  },
   "snakeStart": "it is yours. arrows move it. esc gives it back.",
   "lifeReseeded": "fresh soup. four rules apply.",
   "poemJump": "turning to it."

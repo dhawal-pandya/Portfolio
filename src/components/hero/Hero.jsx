@@ -9,10 +9,10 @@ import resumeUrl from "../../assets/Dhawal_Pandya_Resume.pdf";
 const Hero = () => {
   const [line, setLine] = useState(PROFILE.heroLine);
 
-  // Between three and four in the morning the page admits what it wants.
+  // After midnight and before four, the page admits what it wants.
   useEffect(() => {
     const h = new Date().getHours();
-    if (h === 3) {
+    if (h >= 0 && h < 4) {
       setLine(PROFILE.heroLineNight);
       foundSecret("nightowl");
     }

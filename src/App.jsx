@@ -43,8 +43,26 @@ const App = () => {
     );
   }, []);
 
-  // The old cheat, and the typed word.
+  // The spoken words. Typed anywhere on the page, or said to the terminal,
+  // which relays them here as kc-word events.
   useEffect(() => {
+    const fire = (word) => {
+      if (word === "hesoyam") {
+        windUp(10, 10000);
+        window.dispatchEvent(new CustomEvent("kc-globe-spin"));
+        foundSecret("hesoyam");
+        toast("the wheel turns faster for no one. not even CJ.");
+      } else if (word === "sakshi") {
+        foundSecret("stillness");
+        stillness(5000);
+        setStill(true);
+        setTimeout(() => setStill(false), 5000);
+      } else if (word === "chai") {
+        foundSecret("chai");
+        toast("if you refuse chai, you'll have to take births again.");
+      }
+    };
+
     let buf = "";
     const onKey = (e) => {
       const el = document.activeElement;
@@ -52,19 +70,11 @@ const App = () => {
 
       if (!typing && /^[a-z]$/i.test(e.key)) {
         buf = (buf + e.key.toLowerCase()).slice(-7);
-        if (buf.endsWith("hesoyam")) {
-          buf = "";
-          windUp(10, 10000);
-          window.dispatchEvent(new CustomEvent("kc-globe-spin"));
-          foundSecret("hesoyam");
-          toast("the wheel turns faster for no one. not even CJ.");
-        }
-        if (buf.endsWith("sakshi")) {
-          buf = "";
-          foundSecret("stillness");
-          stillness(5000);
-          setStill(true);
-          setTimeout(() => setStill(false), 5000);
+        for (const word of ["hesoyam", "sakshi", "chai"]) {
+          if (buf.endsWith(word)) {
+            buf = "";
+            fire(word);
+          }
         }
       }
 
@@ -73,8 +83,13 @@ const App = () => {
         quip("save");
       }
     };
+    const onWord = (e) => fire(e.detail?.word);
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    window.addEventListener("kc-word", onWord);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("kc-word", onWord);
+    };
   }, []);
 
   // The page notices the out-of-ordinary.
