@@ -38,7 +38,16 @@ const Terminal = ({ onKanban }) => {
       });
     };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    // phones arrive through the spinning wheel in the nav
+    const onOpen = () => {
+      foundSecret("terminal");
+      setOpen(true);
+    };
+    window.addEventListener("kc-terminal", onOpen);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("kc-terminal", onOpen);
+    };
   }, []);
 
   useEffect(() => {

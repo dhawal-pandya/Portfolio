@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { toggleTheme, currentTheme } from "../../lib/theme";
+import { setOverride, followSun, getOverride } from "../../lib/theme";
 import { quip } from "../../lib/quips";
 
 const LINKS = [
@@ -23,18 +23,21 @@ const MoonIcon = () => (
   </svg>
 );
 
+// The sun at the horizon: the third state, where the page follows the real sky.
+const HorizonIcon = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+    <path d="M3 18h18" />
+    <path d="M7.5 18a4.5 4.5 0 0 1 9 0" />
+    <path d="M12 8V5.5M5.6 10.6l1.8 1.8M18.4 10.6l-1.8 1.8" />
+  </svg>
+);
+
 const Nav = () => {
   const [active, setActive] = useState("");
-  const [theme, setTheme] = useState(currentTheme());
+  const [mode, setMode] = useState(() => getOverride() || "sun");
   const [spin, setSpin] = useState(0);
   const [open, setOpen] = useState(false);
   const toggles = useRef([]);
-
-  useEffect(() => {
-    const onTheme = (e) => setTheme(e.detail);
-    window.addEventListener("kc-theme", onTheme);
-    return () => window.removeEventListener("kc-theme", onTheme);
-  }, []);
 
   useEffect(() => {
     const sections = LINKS.map((l) => document.getElementById(l.id)).filter(Boolean);
@@ -49,8 +52,19 @@ const Nav = () => {
     return () => io.disconnect();
   }, []);
 
+  // Three states, in a circle: pinned day, pinned night, then back to the
+  // actual sky.
   const onToggle = () => {
-    toggleTheme();
+    if (mode === "sun") {
+      setOverride("day");
+      setMode("day");
+    } else if (mode === "day") {
+      setOverride("night");
+      setMode("night");
+    } else {
+      followSun();
+      setMode("sun");
+    }
     const now = Date.now();
     toggles.current = [...toggles.current.filter((t) => now - t < 4000), now];
     if (toggles.current.length >= 4) {
@@ -58,6 +72,8 @@ const Nav = () => {
       quip("toggle");
     }
   };
+
+  const next = mode === "sun" ? "day" : mode === "day" ? "night" : "the actual sky";
 
   return (
     <header
@@ -67,7 +83,14 @@ const Nav = () => {
       <nav className="mx-auto flex max-w-site items-center justify-between px-5 py-2.5 md:px-8">
         <a
           href="#top"
-          onClick={() => setSpin((d) => d + 1080)}
+          onClick={(e) => {
+            setSpin((d) => d + 1080);
+            // on a phone there is no backtick; the wheel is the door
+            if (window.matchMedia("(pointer: coarse)").matches) {
+              e.preventDefault();
+              window.dispatchEvent(new CustomEvent("kc-terminal"));
+            }
+          }}
           className="grid h-9 w-9 place-items-center font-display text-base leading-none text-ink hover:text-accent"
           style={{
             transform: `rotate(${spin}deg)`,
@@ -99,10 +122,10 @@ const Nav = () => {
           <button
             onClick={onToggle}
             className="text-ink-soft transition-colors hover:text-accent"
-            aria-label={theme === "day" ? "switch to night" : "switch to day"}
-            title={theme === "day" ? "night" : "day"}
+            aria-label={`switch to ${next}`}
+            title={next}
           >
-            {theme === "day" ? <MoonIcon /> : <SunIcon />}
+            {mode === "sun" ? <SunIcon /> : mode === "day" ? <MoonIcon /> : <HorizonIcon />}
           </button>
           <button
             onClick={() => setOpen((o) => !o)}

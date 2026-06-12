@@ -46,15 +46,18 @@ const Projects = () => (
           {DATA.projects.map((p) => (
             <Row key={p.title} p={p} />
           ))}
-          <li className="py-5">
-            <a
-              href={DATA.moreLink}
-              target="_blank"
-              rel="noreferrer"
-              className="text-xs link-quiet underline-offset-4 hover:underline"
-            >
-              {DATA.moreText} ↗
-            </a>
+          <li className="flex flex-wrap gap-6 py-5">
+            {DATA.more.map((m) => (
+              <a
+                key={m.href}
+                href={m.href}
+                target="_blank"
+                rel="noreferrer"
+                className="text-xs link-quiet underline-offset-4 hover:underline"
+              >
+                {m.label} ↗
+              </a>
+            ))}
           </li>
         </ul>
       </div>

@@ -1,140 +1,51 @@
 {
   "projects": [
     {
-      "title": "Game of Life",
-      "desc": "four rules, no players, endless consequences",
-      "tags": [
-        "React",
-        "JavaScript"
-      ],
-      "live": "https://dhawal-pandya.github.io/Game-Of-Life/",
-      "code": "https://github.com/dhawal-pandya/Game-Of-Life"
-    },
-    {
       "title": "Aeonis",
       "desc": "ask your distributed traces what went wrong, in plain language",
-      "tags": [
-        "ai",
-        "tracing",
-        "LLM"
-      ],
-      "code": "https://github.com/dhawal-pandya"
-    },
-    {
-      "title": "Elo",
-      "desc": "a chat agent with tools, memory, and opinions",
-      "tags": [
-        "ai",
-        "Python",
-        "Gemini",
-        "MCP"
-      ],
-      "live": "https://elo-service-608661670952.us-central1.run.app/dev-ui/?app=elo-chat-app",
-      "code": "https://github.com/dhawal-pandya/elo-ai"
-    },
-    {
-      "title": "Recommendation Engine",
-      "desc": "GraphRAG over Neo4j. it knows what you want next",
-      "tags": [
-        "ai",
-        "Python",
-        "Neo4j"
-      ],
-      "live": "https://recom-engine-197062920928.us-central1.run.app/"
+      "tags": ["ai", "tracing", "LLM"],
+      "code": "https://github.com/dhawal-pandya/Aeonis"
     },
     {
       "title": "NeatTrace",
       "desc": "a tracing tool, because one language was not enough",
-      "tags": [
-        "Golang",
-        "Rust"
-      ],
+      "tags": ["Golang", "Rust"],
       "code": "https://github.com/dhawal-pandya/NeatTrace"
+    },
+    {
+      "title": "QR Generator-Decoder",
+      "desc": "makes and reads QR codes from the spec, byte by byte",
+      "tags": ["Golang"],
+      "code": "https://github.com/dhawal-pandya/qrcode-generator-decoder"
     },
     {
       "title": "Asteroids",
       "desc": "the 1979 arcade game, rebuilt stone by stone",
-      "tags": [
-        "Golang",
-        "Ebiten"
-      ],
+      "tags": ["Golang", "Ebiten"],
       "code": "https://github.com/dhawal-pandya/Asteroids"
     },
     {
       "title": "Murl",
       "desc": "curl, but mine",
-      "tags": [
-        "Golang"
-      ],
+      "tags": ["Golang"],
       "code": "https://github.com/dhawal-pandya/Murl"
-    },
-    {
-      "title": "QR Generator-Decoder",
-      "desc": "makes and reads QR codes from the spec, byte by byte",
-      "tags": [
-        "Golang"
-      ],
-      "code": "https://github.com/dhawal-pandya/qrcode-generator-decoder"
     },
     {
       "title": "Fynd",
       "desc": "finds files faster than I find my keys",
-      "tags": [
-        "Golang"
-      ],
+      "tags": ["Golang"],
       "code": "https://github.com/dhawal-pandya/Fynd"
     },
     {
-      "title": "Sudoku Solver",
-      "desc": "solves sudoku faster than I ever will",
-      "tags": [
-        "React",
-        "JavaScript"
-      ],
-      "live": "https://dhawal-pandya.github.io/Sudoku-Solver/",
-      "code": "https://github.com/dhawal-pandya/Sudoku-Solver"
-    },
-    {
-      "title": "Diff Checker",
-      "desc": "tells two texts apart, kindly",
-      "tags": [
-        "React",
-        "JavaScript"
-      ],
-      "live": "https://dhawal-pandya.github.io/Diff-Checker/",
-      "code": "https://github.com/dhawal-pandya/Diff-Checker"
-    },
-    {
-      "title": "Pokedex",
-      "desc": "gotta fetch them all",
-      "tags": [
-        "React",
-        "JavaScript"
-      ],
-      "live": "https://dhawal-pandya.github.io/Pokedex/",
-      "code": "https://github.com/dhawal-pandya/Pokedex"
-    },
-    {
-      "title": "SpringStorm",
-      "desc": "springs and storms in the browser",
-      "tags": [
-        "React",
-        "JavaScript"
-      ],
-      "live": "https://dhawal-pandya.github.io/SpringStorm/",
-      "code": "https://github.com/dhawal-pandya/SpringStorm"
-    },
-    {
-      "title": "Number Convertor",
-      "desc": "binary to roman and back. someone had to",
-      "tags": [
-        "React",
-        "JavaScript"
-      ],
-      "live": "https://dhawal-pandya.github.io/Number-Convertor/",
-      "code": "https://github.com/dhawal-pandya/Number-Convertor"
+      "title": "Game of Life",
+      "desc": "four rules, no players, endless consequences",
+      "tags": ["React", "JavaScript"],
+      "live": "https://dhawal-pandya.github.io/Game-Of-Life/",
+      "code": "https://github.com/dhawal-pandya/Game-Of-Life"
     }
   ],
-  "moreText": "and so many more",
-  "moreLink": "https://github.com/dhawal-pandya?tab=repositories"
+  "more": [
+    { "label": "the full list, on soochi", "href": "https://dhawal-pandya.github.io/soochi/" },
+    { "label": "the repositories", "href": "https://github.com/dhawal-pandya?tab=repositories" }
+  ]
 }
