@@ -83,7 +83,7 @@ const Nav = () => {
               <a
                 key={l.id}
                 href={`#${l.id}`}
-                className={`relative font-mono text-xs tracking-wide ${
+                className={`relative text-xs tracking-wide ${
                   active === l.id ? "text-ink" : "text-ink-soft hover:text-ink"
                 }`}
               >
@@ -127,7 +127,7 @@ const Nav = () => {
                 key={l.id}
                 href={`#${l.id}`}
                 onClick={() => setOpen(false)}
-                className={`py-2.5 font-mono text-xs tracking-wide ${
+                className={`py-2.5 text-xs tracking-wide ${
                   active === l.id ? "text-ink" : "text-ink-soft"
                 }`}
               >

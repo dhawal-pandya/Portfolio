@@ -11,9 +11,9 @@ const Job = ({ job }) => {
       <span className="absolute -left-[3.5px] top-2 h-[7px] w-[7px] rounded-full bg-accent" />
       <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
         <h3 className="font-display text-xl text-ink">{job.company}</h3>
-        <span className="font-mono text-xs text-ink-soft">{job.span}</span>
+        <span className="text-xs text-ink-soft">{job.span}</span>
       </div>
-      <p className="mt-1 font-mono text-xs text-ink-soft">
+      <p className="mt-1 text-xs text-ink-soft">
         {job.title} · {job.place}
       </p>
       <ul className="mt-4 max-w-prose space-y-2 text-[15px] leading-relaxed text-ink">
@@ -34,7 +34,7 @@ const Job = ({ job }) => {
       {job.more.length > 0 && (
         <button
           onClick={() => setOpen((o) => !o)}
-          className="mt-3 font-mono text-xs text-ink-soft underline-offset-4 hover:text-accent hover:underline"
+          className="mt-3 text-xs text-ink-soft underline-offset-4 hover:text-accent hover:underline"
         >
           {open ? "less" : "more"}
         </button>
@@ -57,7 +57,7 @@ const Work = () => (
       <div className="mt-16 grid grid-cols-2 gap-x-8 gap-y-6 border-t hairline pt-8 sm:grid-cols-3 md:grid-cols-5">
         {WORK.skills.map((s) => (
           <div key={s.group}>
-            <h4 className="mb-2 font-mono text-xs text-accent">{s.group}</h4>
+            <h4 className="mb-2 text-xs text-accent">{s.group}</h4>
             <ul className="space-y-1 text-sm text-ink-soft">
               {s.items.map((i) => (
                 <li key={i}>{i}</li>

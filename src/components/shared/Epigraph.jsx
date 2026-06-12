@@ -6,7 +6,7 @@ const Epigraph = ({ text, source }) => (
     <blockquote className="font-display text-base italic leading-relaxed text-ink-soft md:text-lg">
       {text}
     </blockquote>
-    <figcaption className="mt-2 font-mono text-[10px] text-ink-soft">
+    <figcaption className="mt-2 text-[10px] text-ink-soft">
       — {source}
     </figcaption>
   </figure>

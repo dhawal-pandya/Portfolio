@@ -13,7 +13,7 @@ const Row = ({ p }) => (
           {p.tags.map((t) => (
             <span
               key={t}
-              className={`font-mono text-[10px] ${t === "ai" ? "text-accent" : "text-ink-soft"}`}
+              className={`text-[10px] ${t === "ai" ? "text-accent" : "text-ink-soft"}`}
             >
               {t}
             </span>
@@ -22,7 +22,7 @@ const Row = ({ p }) => (
       </div>
       <p className="mt-1 text-sm text-ink-soft">{p.desc}</p>
     </div>
-    <div className="flex gap-5 font-mono text-xs sm:justify-end">
+    <div className="flex gap-5 text-xs sm:justify-end">
       {p.live && (
         <a href={p.live} target="_blank" rel="noreferrer" className="link-quiet underline-offset-4 hover:underline">
           live ↗
@@ -53,7 +53,7 @@ const Projects = () => (
               href={DATA.moreLink}
               target="_blank"
               rel="noreferrer"
-              className="font-mono text-xs link-quiet underline-offset-4 hover:underline"
+              className="text-xs link-quiet underline-offset-4 hover:underline"
             >
               {DATA.moreText} ↗
             </a>

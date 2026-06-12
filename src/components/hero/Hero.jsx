@@ -26,18 +26,18 @@ const Hero = () => {
       <Dragon />
       <div className="mx-auto grid w-full max-w-site grid-cols-1 items-center gap-8 px-5 pt-20 md:grid-cols-[1.1fr_1fr] md:px-8">
         <div className="relative z-10 order-2 md:order-1">
-          <p className="mb-3 font-mono text-xs text-ink-soft">{PROFILE.heroKicker}</p>
+          <p className="mb-3 text-xs text-ink-soft">{PROFILE.heroKicker}</p>
           <h1
             onDoubleClick={onNameDoubleClick}
             className="select-none font-display text-5xl leading-tight text-ink md:text-7xl"
           >
             {PROFILE.name}
           </h1>
-          <p className="mt-4 h-6 font-mono text-sm text-accent">
+          <p className="mt-4 h-6 text-sm text-accent">
             <ScrambledText words={PROFILE.roles} />
           </p>
-          <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft">{line}</p>
-          <div className="mt-10 flex gap-6 font-mono text-xs">
+          {line && <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft">{line}</p>}
+          <div className="mt-10 flex gap-6 text-xs">
             <a href="#work" className="link-quiet underline-offset-4 hover:underline">
               the work ↓
             </a>

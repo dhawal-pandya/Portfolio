@@ -49,7 +49,7 @@ const About = () => {
               held ? "opacity-100" : "pointer-events-none opacity-0"
             }`}
           >
-            <p className="font-mono text-xs leading-relaxed text-ink-soft">
+            <p className="text-xs leading-relaxed text-ink-soft">
               {PROFILE.about.photoHold}
             </p>
           </div>

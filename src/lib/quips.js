@@ -10,6 +10,8 @@ let lastSpoke = 0;
 const used = {};
 
 export function quip(trigger) {
+  // phones are spared the commentary
+  if (window.matchMedia("(pointer: coarse)").matches) return false;
   const pool = QUIPS[trigger];
   if (!pool || !pool.length) return false;
   const now = Date.now();

@@ -117,19 +117,19 @@ const Verses = () => {
         <div className="w-[9vw] shrink-0" aria-hidden="true" />
       </div>
       <div className="mx-auto flex max-w-site items-center justify-between px-5 md:px-8">
-        <p className="font-mono text-xs text-ink-soft">
+        <p className="text-xs text-ink-soft">
           {index + 1} / {poems.length}
         </p>
         <div className="flex gap-3">
-          <button onClick={() => by(-1)} aria-label="previous poem" className="border hairline px-3 py-1 font-mono text-xs text-ink-soft hover:text-accent">
+          <button onClick={() => by(-1)} aria-label="previous poem" className="border hairline px-3 py-1 text-xs text-ink-soft hover:text-accent">
             ←
           </button>
-          <button onClick={() => by(1)} aria-label="next poem" className="border hairline px-3 py-1 font-mono text-xs text-ink-soft hover:text-accent">
+          <button onClick={() => by(1)} aria-label="next poem" className="border hairline px-3 py-1 text-xs text-ink-soft hover:text-accent">
             →
           </button>
         </div>
       </div>
-      <p className="mx-auto mt-12 max-w-site px-5 font-mono text-xs text-ink-soft md:px-8">
+      <p className="mx-auto mt-12 max-w-site px-5 text-xs text-ink-soft md:px-8">
         the longer words live at{" "}
         <a href={PROFILE.blog} target="_blank" rel="noreferrer" className="text-accent underline-offset-4 hover:underline">
           dhawalpandya01.hashnode.dev ↗

@@ -26,7 +26,7 @@ const Contact = () => {
       <div className="relative z-10 mx-auto max-w-site px-5 py-24 md:px-8 md:py-32">
         <Epigraph text="What should I say, to begin the talk?" source="Dare to Ask" />
         <SectionHead title="contact" mark="संपर्क" />
-        <ul className="max-w-md space-y-4 font-mono text-sm">
+        <ul className="max-w-md space-y-4 text-sm">
           <li className="flex items-baseline justify-between gap-4 border-b hairline pb-3">
             <span className="text-ink-soft">email</span>
             <button onClick={copyEmail} className="text-ink underline-offset-4 hover:text-accent hover:underline">

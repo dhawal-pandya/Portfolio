@@ -320,7 +320,7 @@ const Ash = () => {
             <br />
             than merely dust.
           </p>
-          <p className="mt-8 font-mono text-xs text-ink-soft">stillness is the answer</p>
+          <p className="mt-8 text-xs text-ink-soft">stillness is the answer</p>
         </div>
       </div>
     </main>

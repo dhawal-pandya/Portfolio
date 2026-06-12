@@ -47,8 +47,9 @@ const Chai = () => {
     const s = st.current;
     if (!s.colors) return;
 
-    // The cup sits low and to the left, beneath the photograph.
-    const baseX = 70;
+    // Desktop: low and to the left. Mobile (single column): bottom-right.
+    const mobile = w < 768;
+    const baseX = mobile ? w - 110 : 70;
     const baseY = h - 64;
 
     // Steam: born just above the tea, rising, swaying, thinning to nothing.

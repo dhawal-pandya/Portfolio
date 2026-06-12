@@ -8,14 +8,14 @@ import useCanvasLoop from "../../lib/useCanvasLoop";
 
 const COUNT = 15;
 const GRID = 6; // px per cell, same dialect as everything else
-const ALPHA = 0.5;
+const ALPHA = 0.9;
 const NEIGHBOR = 90; // how far a bird looks
 const APART = 26; // personal space
 const VMIN = 28;
 const VMAX = 72;
 
 function simColor() {
-  return getComputedStyle(document.documentElement).getPropertyValue("--ink-soft").trim();
+  return getComputedStyle(document.documentElement).getPropertyValue("--sim").trim();
 }
 
 const Birds = () => {
