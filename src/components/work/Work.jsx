@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Epigraph from "../shared/Epigraph";
 import SectionHead from "../shared/SectionHead";
 import Birds from "./Birds";
 import WORK from "../../data/work.json";
@@ -46,8 +45,7 @@ const Job = ({ job }) => {
 const Work = () => (
   <section id="work" className="relative">
     <Birds />
-    <div className="relative z-10 mx-auto max-w-site px-5 py-24 md:px-8 md:py-32">
-      <Epigraph text={WORK.epigraph} source={WORK.epigraphSource} />
+    <div className="relative z-10 mx-auto max-w-site px-5 py-12 md:px-8 md:py-16">
       <SectionHead title="work" mark="कर्म" />
       <div className="mt-4">
         {WORK.jobs.map((j) => (

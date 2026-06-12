@@ -1,6 +1,4 @@
 {
-  "epigraph": "Chaos is spontaneous and happens without any effort, but Order comes at a cost.",
-  "epigraphSource": "Study of Time",
   "jobs": [
     {
       "company": "Bolt",
@@ -49,10 +47,51 @@
     }
   ],
   "skills": [
-    { "group": "backend", "items": ["Golang", "Java", "Python", "SpringBoot", "Node.js"] },
-    { "group": "frontend", "items": ["React", "Next.js", "Angular"] },
-    { "group": "data", "items": ["PostgreSQL", "MongoDB", "Redis", "Kafka"] },
-    { "group": "infra", "items": ["AWS", "GCP", "Docker", "Kubernetes", "CI/CD"] },
-    { "group": "ai", "items": ["LLMs", "RAG", "agents", "MLOps"] }
+    {
+      "group": "backend",
+      "items": [
+        "Golang",
+        "Java",
+        "Python",
+        "SpringBoot",
+        "Node.js"
+      ]
+    },
+    {
+      "group": "frontend",
+      "items": [
+        "React",
+        "Next.js",
+        "Angular"
+      ]
+    },
+    {
+      "group": "data",
+      "items": [
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "Kafka"
+      ]
+    },
+    {
+      "group": "infra",
+      "items": [
+        "AWS",
+        "GCP",
+        "Docker",
+        "Kubernetes",
+        "CI/CD"
+      ]
+    },
+    {
+      "group": "ai",
+      "items": [
+        "LLMs",
+        "RAG",
+        "agents",
+        "MLOps"
+      ]
+    }
   ]
 }

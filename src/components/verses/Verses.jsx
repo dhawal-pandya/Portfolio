@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import Epigraph from "../shared/Epigraph";
 import SectionHead from "../shared/SectionHead";
 import POEMS from "../../data/poems.json";
 import PROFILE from "../../data/profile.json";
@@ -99,12 +98,8 @@ const Verses = () => {
   };
 
   return (
-    <section id="verses" className="py-24 md:py-32">
+    <section id="verses" className="py-12 md:py-16">
       <div className="mx-auto max-w-site px-5 md:px-8">
-        <Epigraph
-          text="Shallow talk is not for me. I wish to converse for ten thousand years."
-          source="Dare to Ask"
-        />
         <SectionHead title="verses" mark="शब्द" />
       </div>
       <div

@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import Epigraph from "../shared/Epigraph";
 import SectionHead from "../shared/SectionHead";
 import Chai from "./Chai";
 import PROFILE from "../../data/profile.json";
@@ -25,7 +24,7 @@ const About = () => {
     <section id="about" className="relative">
       <Chai />
       <div className="relative z-10 mx-auto max-w-site px-5 py-24 md:px-8 md:py-32">
-      <Epigraph text={PROFILE.about.epigraph} source={PROFILE.about.epigraphSource} />
+      <SectionHead title="about" mark="परिचयः" />
       <div className="grid grid-cols-1 gap-10 md:grid-cols-[320px_1fr] md:gap-16">
         <div
           className="relative mx-auto h-72 w-72 select-none overflow-hidden rounded-sm border hairline md:mx-0 md:h-80 md:w-80"
@@ -55,7 +54,6 @@ const About = () => {
           </div>
         </div>
         <div>
-          <SectionHead title="about" />
           <div className="max-w-prose space-y-5 text-[15px] leading-relaxed text-ink">
             {PROFILE.about.paragraphs.map((p, i) => (
               <p key={i} className={i === PROFILE.about.paragraphs.length - 1 ? "text-ink-soft" : ""}>

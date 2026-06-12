@@ -17,21 +17,10 @@
     "problem solver"
   ],
   "about": {
-    "epigraph": "यतः कृष्णस्ततो धर्मो यतो धर्मस्ततो जयः ॥",
-    "epigraphSource": "Mahabharat",
     "paragraphs": [
-      "I did not start in software.",
-
-      "I studied Chemistry, drawn to it by the same instinct that later pulled me toward engineering: a desire to understand how complex systems work beneath the surface. After graduating, I spent several years preparing for the UPSC examination. Those years taught me discipline, consistency, and how to tackle large bodies of knowledge, but they also clarified that my interests lay elsewhere.",
-
-      "On January 1st, 2022, I committed to a hundred-day plan to learn programming. What began as an experiment quickly became an obsession. Programming combined everything I enjoyed: problem-solving, systems thinking, and the ability to build things from first principles. The deeper I went, the more I realized that modern life runs on software, and that understanding code meant understanding the machinery behind much of the world.",
-
-      "Today, I work as a Software Engineer building financial infrastructure. My experience spans payment systems, recurring billing platforms, merchant onboarding, distributed systems, and AI-powered internal tools. I have worked across Golang, Java, Python, cloud infrastructure, databases, and large-scale backend systems, helping teams ship reliable products that operate at significant scale.",
-
-      "Outside of work, I read extensively, build side projects, and explore ideas through writing. I am particularly interested in distributed systems, artificial intelligence, complex adaptive systems, and the emergence of order from simple rules.",
-
-      "I grew up in Mumbai and have shifted to Tithal, Valsad, a coastal town in Gujarat, India. It is where I learned to read, where I learned to write code, and where I continue to build.",
-
+      "I started my career in software in 2022 with a hundred-day commitment to learn programming. What began as an experiment quickly became a profession. Programming combined everything I enjoyed: problem-solving, systems thinking, and the ability to build things from first principles.",
+      "Since then, I have worked across startups and fintech, building payment systems, merchant platforms, internal AI tools, and distributed backend services. My work has ranged from recurring payments and financial infrastructure at scale to developer tooling, cloud systems, and applied AI.",
+      "Today, I enjoy building reliable systems, understanding how complex software behaves in production, and turning difficult problems into simple, maintainable solutions.",
       "Let's talk."
     ],
     "photoHold": "this photo took about forty attempts. the code takes less."

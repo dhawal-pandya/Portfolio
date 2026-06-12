@@ -1,5 +1,4 @@
 import React from "react";
-import Epigraph from "../shared/Epigraph";
 import SectionHead from "../shared/SectionHead";
 import GameOfLife from "./GameOfLife";
 import DATA from "../../data/projects.json";
@@ -40,9 +39,8 @@ const Row = ({ p }) => (
 const Projects = () => (
   <section id="projects" className="relative">
     <GameOfLife />
-    <div className="pointer-events-none relative z-10 mx-auto max-w-site px-5 py-24 md:px-8 md:py-32">
+    <div className="pointer-events-none relative z-10 mx-auto max-w-site px-5 py-12 md:px-8 md:py-16">
       <div className="pointer-events-auto">
-        <Epigraph text={DATA.epigraph} source={DATA.epigraphSource} />
         <SectionHead title="projects" mark="लीला" />
         <ul className="border-t hairline">
           {DATA.projects.map((p) => (

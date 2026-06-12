@@ -95,7 +95,7 @@ const Chai = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="pointer-events-none absolute inset-0 h-full w-full"
+      className="pointer-events-none absolute inset-0 h-full w-full md:hidden"
       aria-hidden="true"
     />
   );

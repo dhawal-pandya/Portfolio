@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Epigraph from "../shared/Epigraph";
 import SectionHead from "../shared/SectionHead";
 import Snake from "./Snake";
 import PROFILE from "../../data/profile.json";
@@ -23,8 +22,7 @@ const Contact = () => {
   return (
     <section id="contact" className="relative">
       <Snake />
-      <div className="relative z-10 mx-auto max-w-site px-5 py-24 md:px-8 md:py-32">
-        <Epigraph text="What should I say, to begin the talk?" source="Dare to Ask" />
+      <div className="relative z-10 mx-auto max-w-site px-5 py-12 md:px-8 md:py-16">
         <SectionHead title="contact" mark="संपर्क" />
         <ul className="max-w-md space-y-4 text-sm">
           <li className="flex items-baseline justify-between gap-4 border-b hairline pb-3">
