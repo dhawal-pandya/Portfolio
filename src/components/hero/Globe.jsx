@@ -49,6 +49,7 @@ const Globe = ({ className = "" }) => {
         soft: cssColor("--ink-soft"),
         accent: cssColor("--accent"),
         line: cssColor("--line"),
+        bg: cssColor("--bg"),
       };
     };
     load();
@@ -78,6 +79,7 @@ const Globe = ({ className = "" }) => {
       s.target = null;
       canvas.setPointerCapture?.(e.pointerId);
     };
+    let fastSpins = [];
     const move = (e) => {
       if (!s.dragging) return;
       const dx = e.clientX - s.lastX;
@@ -86,7 +88,17 @@ const Globe = ({ className = "" }) => {
       s.lastT = performance.now();
       s.theta -= dx * 0.006;
       s.vel = -(dx / dt) * 6;
-      if (Math.abs(s.vel) > 4) quip("globe");
+      // one violent spin is enthusiasm. several in a row earns a word.
+      if (Math.abs(s.vel) > 4) {
+        const now = Date.now();
+        if (!fastSpins.length || now - fastSpins[fastSpins.length - 1] > 800) {
+          fastSpins = [...fastSpins.filter((t) => now - t < 8000), now];
+          if (fastSpins.length >= 3) {
+            fastSpins = [];
+            quip("globe");
+          }
+        }
+      }
     };
     const up = () => {
       s.dragging = false;
@@ -138,9 +150,12 @@ const Globe = ({ className = "" }) => {
     const sinA = Math.sin(AX);
     const [sx, sy, sz] = s.sun;
 
-    // Sphere edge, barely there.
+    // The planet is solid: an opaque disc in the page's own color, invisible
+    // against the page but a true wall to whatever flies behind it.
     ctx.beginPath();
     ctx.arc(cx, cy, R, 0, Math.PI * 2);
+    ctx.fillStyle = s.colors.bg;
+    ctx.fill();
     ctx.strokeStyle = s.colors.line;
     ctx.lineWidth = 1;
     ctx.stroke();
@@ -204,6 +219,7 @@ const Globe = ({ className = "" }) => {
   return (
     <canvas
       ref={canvasRef}
+      data-globe="1"
       className={`block h-full w-full touch-none ${className}`}
       style={{ cursor: "grab" }}
       aria-label="a dotted globe, lit by the actual sun, draggable"

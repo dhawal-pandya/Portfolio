@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Epigraph from "../shared/Epigraph";
 import SectionHead from "../shared/SectionHead";
+import Birds from "./Birds";
 import WORK from "../../data/work.json";
 
 const Job = ({ job }) => {
@@ -43,25 +44,28 @@ const Job = ({ job }) => {
 };
 
 const Work = () => (
-  <section id="work" className="mx-auto max-w-site px-5 py-24 md:px-8 md:py-32">
-    <Epigraph text={WORK.epigraph} source={WORK.epigraphSource} />
-    <SectionHead title="work" mark="कर्म" />
-    <div className="mt-4">
-      {WORK.jobs.map((j) => (
-        <Job key={j.company} job={j} />
-      ))}
-    </div>
-    <div className="mt-16 grid grid-cols-2 gap-x-8 gap-y-6 border-t hairline pt-8 sm:grid-cols-3 md:grid-cols-5">
-      {WORK.skills.map((s) => (
-        <div key={s.group}>
-          <h4 className="mb-2 font-mono text-xs text-accent">{s.group}</h4>
-          <ul className="space-y-1 text-sm text-ink-soft">
-            {s.items.map((i) => (
-              <li key={i}>{i}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
+  <section id="work" className="relative">
+    <Birds />
+    <div className="relative z-10 mx-auto max-w-site px-5 py-24 md:px-8 md:py-32">
+      <Epigraph text={WORK.epigraph} source={WORK.epigraphSource} />
+      <SectionHead title="work" mark="कर्म" />
+      <div className="mt-4">
+        {WORK.jobs.map((j) => (
+          <Job key={j.company} job={j} />
+        ))}
+      </div>
+      <div className="mt-16 grid grid-cols-2 gap-x-8 gap-y-6 border-t hairline pt-8 sm:grid-cols-3 md:grid-cols-5">
+        {WORK.skills.map((s) => (
+          <div key={s.group}>
+            <h4 className="mb-2 font-mono text-xs text-accent">{s.group}</h4>
+            <ul className="space-y-1 text-sm text-ink-soft">
+              {s.items.map((i) => (
+                <li key={i}>{i}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 );

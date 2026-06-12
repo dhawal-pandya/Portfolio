@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Globe from "./Globe";
+import Dragon from "./Dragon";
 import ScrambledText from "./ScrambledText";
 import PROFILE from "../../data/profile.json";
 import { quip } from "../../lib/quips";
@@ -22,6 +23,7 @@ const Hero = () => {
 
   return (
     <section id="top" className="relative flex min-h-screen items-center overflow-hidden">
+      <Dragon />
       <div className="mx-auto grid w-full max-w-site grid-cols-1 items-center gap-8 px-5 pt-20 md:grid-cols-[1.1fr_1fr] md:px-8">
         <div className="relative z-10 order-2 md:order-1">
           <p className="mb-3 font-mono text-xs text-ink-soft">{PROFILE.heroKicker}</p>
@@ -47,7 +49,7 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <div className="order-1 mx-auto aspect-square w-[78vw] max-w-[300px] opacity-60 md:order-2 md:w-full md:max-w-[480px] md:opacity-100">
+        <div className="relative z-[1] order-1 mx-auto aspect-square w-[78vw] max-w-[300px] opacity-60 md:order-2 md:w-full md:max-w-[480px] md:opacity-100">
           <Globe />
         </div>
       </div>

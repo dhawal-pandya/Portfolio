@@ -26,6 +26,8 @@ const MoonIcon = () => (
 const Nav = () => {
   const [active, setActive] = useState("");
   const [theme, setTheme] = useState(currentTheme());
+  const [spin, setSpin] = useState(0);
+  const [open, setOpen] = useState(false);
   const toggles = useRef([]);
 
   useEffect(() => {
@@ -62,31 +64,38 @@ const Nav = () => {
       className="fixed inset-x-0 top-0 z-50 border-b hairline backdrop-blur-sm"
       style={{ background: "color-mix(in srgb, var(--bg) 82%, transparent)" }}
     >
-      <nav className="mx-auto flex max-w-site items-center justify-between px-5 py-3 md:px-8">
+      <nav className="mx-auto flex max-w-site items-center justify-between px-5 py-2.5 md:px-8">
         <a
           href="#top"
-          className="font-display text-base text-ink hover:text-accent"
+          onClick={() => setSpin((d) => d + 1080)}
+          className="grid h-9 w-9 place-items-center font-display text-base leading-none text-ink hover:text-accent"
+          style={{
+            transform: `rotate(${spin}deg)`,
+            transition: "transform 1600ms cubic-bezier(0.16, 1, 0.3, 1)",
+          }}
           aria-label="back to the top"
         >
-          dp<span className="text-accent">.</span>
+          dp
         </a>
-        <div className="flex items-center gap-4 md:gap-7">
-          {LINKS.map((l) => (
-            <a
-              key={l.id}
-              href={`#${l.id}`}
-              className={`relative font-mono text-[11px] tracking-wide md:text-xs ${
-                active === l.id ? "text-ink" : "text-ink-soft hover:text-ink"
-              }`}
-            >
-              {l.label}
-              <span
-                className={`absolute -bottom-1.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-accent transition-opacity ${
-                  active === l.id ? "opacity-100" : "opacity-0"
+        <div className="flex items-center gap-5 md:gap-7">
+          <div className="hidden items-center gap-7 md:flex">
+            {LINKS.map((l) => (
+              <a
+                key={l.id}
+                href={`#${l.id}`}
+                className={`relative font-mono text-xs tracking-wide ${
+                  active === l.id ? "text-ink" : "text-ink-soft hover:text-ink"
                 }`}
-              />
-            </a>
-          ))}
+              >
+                {l.label}
+                <span
+                  className={`absolute -bottom-1.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-accent transition-opacity ${
+                    active === l.id ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              </a>
+            ))}
+          </div>
           <button
             onClick={onToggle}
             className="text-ink-soft transition-colors hover:text-accent"
@@ -95,8 +104,39 @@ const Nav = () => {
           >
             {theme === "day" ? <MoonIcon /> : <SunIcon />}
           </button>
+          <button
+            onClick={() => setOpen((o) => !o)}
+            className="text-ink-soft transition-colors hover:text-accent md:hidden"
+            aria-label={open ? "close menu" : "open menu"}
+            aria-expanded={open}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+              {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 9h16M4 15h16" />}
+            </svg>
+          </button>
         </div>
       </nav>
+      {open && (
+        <div
+          className="border-t hairline md:hidden"
+          style={{ background: "color-mix(in srgb, var(--bg) 94%, transparent)" }}
+        >
+          <div className="mx-auto flex max-w-site flex-col px-5 py-2">
+            {LINKS.map((l) => (
+              <a
+                key={l.id}
+                href={`#${l.id}`}
+                onClick={() => setOpen(false)}
+                className={`py-2.5 font-mono text-xs tracking-wide ${
+                  active === l.id ? "text-ink" : "text-ink-soft"
+                }`}
+              >
+                {l.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </header>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import Epigraph from "../shared/Epigraph";
 import SectionHead from "../shared/SectionHead";
+import Chai from "./Chai";
 import PROFILE from "../../data/profile.json";
 import { foundSecret } from "../../lib/secrets";
 import me from "../../assets/dp1.png";
@@ -21,7 +22,9 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="mx-auto max-w-site px-5 py-24 md:px-8 md:py-32">
+    <section id="about" className="relative">
+      <Chai />
+      <div className="relative z-10 mx-auto max-w-site px-5 py-24 md:px-8 md:py-32">
       <Epigraph text={PROFILE.about.epigraph} source={PROFILE.about.epigraphSource} />
       <div className="grid grid-cols-1 gap-10 md:grid-cols-[320px_1fr] md:gap-16">
         <div
@@ -61,6 +64,7 @@ const About = () => {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
