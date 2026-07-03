@@ -7,6 +7,13 @@
       "code": "https://github.com/dhawal-pandya/Aeonis"
     },
     {
+      "title": "Matsyalok",
+      "desc": "a reef where no one is told who eats whom. size decides",
+      "tags": ["TypeScript", "simulation"],
+      "live": "https://dhawal-pandya.github.io/Matsyalok/",
+      "code": "https://github.com/dhawal-pandya/Matsyalok"
+    },
+    {
       "title": "NeatTrace",
       "desc": "a tracing tool, because one language was not enough",
       "tags": ["Golang", "Rust"],

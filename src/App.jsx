@@ -15,6 +15,7 @@ import Ash from "./components/secrets/Ash";
 import { startSunWatch } from "./lib/theme";
 import { windUp, stillness } from "./lib/clock";
 import { foundSecret, toast } from "./lib/secrets";
+import { CHEATS, TEA_WORDS, WITNESS_WORD, WORDS, MAX_WORD_LEN } from "./lib/words";
 import { quip } from "./lib/quips";
 
 function useHashRoute() {
@@ -47,17 +48,17 @@ const App = () => {
   // which relays them here as kc-word events.
   useEffect(() => {
     const fire = (word) => {
-      if (word === "hesoyam") {
+      if (CHEATS[word]) {
         windUp(10, 10000);
         window.dispatchEvent(new CustomEvent("kc-globe-spin"));
         foundSecret("hesoyam");
-        toast("the wheel turns faster for no one. not even CJ.");
-      } else if (word === "sakshi") {
+        toast(CHEATS[word].toast);
+      } else if (word === WITNESS_WORD) {
         foundSecret("stillness");
         stillness(5000);
         setStill(true);
         setTimeout(() => setStill(false), 5000);
-      } else if (word === "chai") {
+      } else if (TEA_WORDS.includes(word)) {
         foundSecret("chai");
         toast("if you refuse chai, you'll have to take births again.");
       }
@@ -69,8 +70,8 @@ const App = () => {
       const typing = el && (el.tagName === "INPUT" || el.tagName === "TEXTAREA");
 
       if (!typing && /^[a-z]$/i.test(e.key)) {
-        buf = (buf + e.key.toLowerCase()).slice(-7);
-        for (const word of ["hesoyam", "sakshi", "chai"]) {
+        buf = (buf + e.key.toLowerCase()).slice(-MAX_WORD_LEN);
+        for (const word of WORDS) {
           if (buf.endsWith(word)) {
             buf = "";
             fire(word);

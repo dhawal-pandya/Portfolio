@@ -3,6 +3,7 @@ import T from "../../data/terminal.json";
 import POEMS from "../../data/poems.json";
 import PROFILE from "../../data/profile.json";
 import { foundSecret, secretCount, foundIds, SECRET_IDS } from "../../lib/secrets";
+import { CHEATS, TEA_WORDS, WITNESS_WORD } from "../../lib/words";
 
 // Press ` anywhere. The page has a back door, and the back door has manners.
 
@@ -71,6 +72,14 @@ const Terminal = ({ onKanban }) => {
     const head = h0.replace(/^\/+|\/+$/g, "") || h0;
     const arg = rest.join(" ");
 
+    // the words that work out there work in here too
+    if (CHEATS[head] || head === WITNESS_WORD || TEA_WORDS.includes(head)) {
+      const word = TEA_WORDS.includes(head) ? TEA_WORDS[0] : head;
+      window.dispatchEvent(new CustomEvent("kc-word", { detail: { word } }));
+      print(T.wordAck[word] || T.wordAck[CHEATS[word].game]);
+      return;
+    }
+
     switch (head) {
       case "help":
         T.help.forEach((l) => print(l));
@@ -129,13 +138,6 @@ const Terminal = ({ onKanban }) => {
       case "tathastu":
         foundSecret("tathastu");
         print(T.tathastu);
-        break;
-      // the words that work out there work in here too
-      case "hesoyam":
-      case "sakshi":
-      case "chai":
-        window.dispatchEvent(new CustomEvent("kc-word", { detail: { word: head } }));
-        print(T.wordAck[head]);
         break;
       // never advertised. you have to ask.
       case "hint":
