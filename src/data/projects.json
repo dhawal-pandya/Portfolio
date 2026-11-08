@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "title": "Yantralok",
+      "desc": "draw a system, add load, and watch the bottlenecks, queue overflows, and retry cascades show up on their own",
+      "tags": ["TypeScript", "distributed systems", "simulation"],
+      "live": "https://dhawal-pandya.github.io/Yantralok/",
+      "code": "https://github.com/dhawal-pandya/Yantralok"
+    },
+    {
       "title": "Aeonis",
       "desc": "ask your distributed traces what went wrong, in plain language",
       "tags": ["ai", "tracing", "LLM"],

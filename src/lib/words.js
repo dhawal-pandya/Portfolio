@@ -28,7 +28,7 @@ export const CHEATS = {
   },
   lxgiwyl: {
     game: "san andreas",
-    toast: "weapon set one. the strongest thing here is still the resume.",
+    toast: "weapon set one. the strongest thing here is still the work.",
   },
   uzumymw: {
     game: "san andreas",

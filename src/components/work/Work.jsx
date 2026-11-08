@@ -13,7 +13,8 @@ const Job = ({ job }) => {
         <span className="text-xs text-ink-soft">{job.span}</span>
       </div>
       <p className="mt-1 text-xs text-ink-soft">
-        {job.title} · {job.place}
+        {job.title}
+        {job.place && ` · ${job.place}`}
       </p>
       <ul className="mt-4 max-w-prose space-y-2 text-[15px] leading-relaxed text-ink">
         {job.points.map((p, i) => (
@@ -52,7 +53,7 @@ const Work = () => (
           <Job key={j.company} job={j} />
         ))}
       </div>
-      <div className="mt-16 grid grid-cols-2 gap-x-8 gap-y-6 border-t hairline pt-8 sm:grid-cols-3 md:grid-cols-5">
+      <div className="mt-16 grid grid-cols-2 gap-x-8 gap-y-6 border-t hairline pt-8 sm:grid-cols-3 lg:grid-cols-6">
         {WORK.skills.map((s) => (
           <div key={s.group}>
             <h4 className="mb-2 text-xs text-accent">{s.group}</h4>

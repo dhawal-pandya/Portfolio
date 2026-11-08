@@ -1,19 +1,30 @@
 {
   "jobs": [
     {
+      "company": "Invictus AI",
+      "title": "AI Engineer",
+      "span": "Jul 2026 — present",
+      "place": "HQ: Henderson, Nevada. Remote: Valsad",
+      "points": [
+        "Building backend services and RAG pipelines for a conversational AI platform, with prompt guardrails, tool-calling APIs, and structured extraction over large document sets",
+        "Shipping automated compliance scanning for ADA, CAN-SPAM, cookie policy, and Terms of Service violations across customer websites, producing structured audit reports at scale"
+      ],
+      "more": []
+    },
+    {
       "company": "Bolt",
       "title": "Software Engineer",
-      "span": "Dec 2025 — present",
-      "place": "remote, from Valsad",
+      "span": "Dec 2025 — Jul 2026",
+      "place": "HQ: San Francisco. Remote: Valsad",
       "points": [
         "Core contributor on the merchant experience team, rebuilding merchant onboarding from scratch and cutting support tickets by up to 70%",
         "Led the design of a self-serve merchant onboarding system, reducing ops dependency and raising activation throughput",
         "Built a merchant-scoped AI support agent for the help center, with guardrails and tool-calling APIs for secure real-time retrieval"
       ],
       "more": [
-        "Architected and owned a draft-preview-publish configuration workflow across environments, making merchant-side config changes safe",
-        "Owned critical checkout flows, resolving high-impact merchant and payment reliability issues",
-        "Designed backend APIs for agent tool use with strict merchant-level data isolation"
+        "Architected and owned a draft-preview-publish configuration workflow across environments, making merchant-side config changes safe and lifting dashboard adoption",
+        "Owned critical checkout flows end-to-end, resolving high-impact merchant and payment reliability issues in production",
+        "Designed backend APIs for agent tool use with strict merchant-level data isolation and response correctness"
       ]
     },
     {
@@ -22,14 +33,15 @@
       "span": "Jul 2024 — Oct 2025",
       "place": "Pune",
       "points": [
-        "Led the core Cards and Recurring Infra team at MandateHQ, building mandate creation for recurring payments at 50k/hr in Golang and Java",
-        "Led multi-network recurring payment integrations across Visa, Mastercard, and RuPay",
-        "Indexed high-usage databases from logs, cutting DB response time from 200ms to 50ms"
+        "Led the core Cards and Recurring Infra team at MandateHQ, building mandate creation for recurring payments at 50k requests/hr across Go and Java/Spring Boot microservices talking over Kafka",
+        "Led multi-network recurring payment integrations across Visa, Mastercard, and RuPay, building credit-card mandate flows that widened payment coverage",
+        "Indexed high-usage databases from query logs, cutting DB response time from 200ms to 50ms"
       ],
       "more": [
+        "Resolved production incidents in TokenHQ, a Java/Spring Boot card-tokenization service, on on-call rotations; ran Kubernetes deploys and alerting with Spinnaker, Coralogix, and Zenduty",
+        "Built Prometheus dashboards for API latency and traffic, enabling real-time failure detection and alerting",
         "Swapped emulation for cross-compilation, cutting build times by 84%",
         "Fixed 30+ vulnerabilities to meet PCI DSS standards",
-        "Built Prometheus dashboards for API latencies and traffic; carried on-call with Spinnaker, Coralogix, and Zenduty",
         "Single-handedly built an internal GenAI chatbot letting business teams query MandateHQ data in plain language"
       ]
     },
@@ -39,7 +51,7 @@
       "span": "Apr 2023 — Jun 2024",
       "place": "Bengaluru, employee no. 1",
       "points": [
-        "Cut video delivery latency to 120ms by redesigning secure media workflows on AWS S3",
+        "Cut video delivery latency to 120ms by redesigning secure media workflows on AWS S3 across paid and unpaid streaming tiers",
         "Wrote six core and five auxiliary microservices from scratch, and their frontends",
         "Integrated Stripe and Razorpay payments, directly feeding platform monetization"
       ],
@@ -48,50 +60,28 @@
   ],
   "skills": [
     {
-      "group": "backend",
-      "items": [
-        "Golang",
-        "Java",
-        "Python",
-        "SpringBoot",
-        "Node.js"
-      ]
+      "group": "languages",
+      "items": ["Java", "Go", "Python", "JavaScript / TypeScript", "SQL"]
     },
     {
-      "group": "frontend",
-      "items": [
-        "React",
-        "Next.js",
-        "Angular"
-      ]
+      "group": "backend",
+      "items": ["Spring Boot", "Microservices", "REST APIs", "Concurrency", "Node.js", "Express", "Flask"]
     },
     {
       "group": "data",
-      "items": [
-        "PostgreSQL",
-        "MongoDB",
-        "Redis",
-        "Kafka"
-      ]
+      "items": ["PostgreSQL", "Redis", "MongoDB", "Kafka", "Schema & Index Design"]
     },
     {
       "group": "infra",
-      "items": [
-        "AWS",
-        "GCP",
-        "Docker",
-        "Kubernetes",
-        "CI/CD"
-      ]
+      "items": ["AWS", "GCP", "Docker", "Kubernetes", "CI/CD", "Spinnaker", "Prometheus", "On-Call"]
+    },
+    {
+      "group": "frontend",
+      "items": ["React", "Next.js", "Angular"]
     },
     {
       "group": "ai",
-      "items": [
-        "LLMs",
-        "RAG",
-        "agents",
-        "MLOps"
-      ]
+      "items": ["LLMs (Claude, Gemini, Ollama)", "RAG", "Prompt Engineering", "Guardrails", "Tool-Calling APIs"]
     }
   ]
 }

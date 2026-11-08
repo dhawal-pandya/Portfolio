@@ -3,7 +3,6 @@ import SectionHead from "../shared/SectionHead";
 import Snake from "./Snake";
 import PROFILE from "../../data/profile.json";
 import { quip } from "../../lib/quips";
-import resumeUrl from "../../assets/Dhawal_Pandya_Resume.pdf";
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);
@@ -41,12 +40,6 @@ const Contact = () => {
             <span className="text-ink-soft">linkedin</span>
             <a href={PROFILE.linkedin} target="_blank" rel="noreferrer" className="text-ink underline-offset-4 hover:text-accent hover:underline">
               dhawal-pandya ↗
-            </a>
-          </li>
-          <li className="flex items-baseline justify-between gap-4 border-b hairline pb-3">
-            <span className="text-ink-soft">resume</span>
-            <a href={resumeUrl} target="_blank" rel="noreferrer" className="text-ink underline-offset-4 hover:text-accent hover:underline">
-              the PDF ↗
             </a>
           </li>
         </ul>
