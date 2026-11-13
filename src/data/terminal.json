@@ -35,6 +35,12 @@
     "vice city": "vice city picks up. it never really hung up.",
     "san andreas": "grove street, home. it still answers."
   },
+  "uptime": {
+    "line": "up {days}, {hm}. {turns}",
+    "none": "the earth has not turned once since you first came.",
+    "once": "the earth has turned once since you first came.",
+    "many": "the earth has turned {n} times since you first came."
+  },
   "tathastu": "so it is. you read consoles and follow instructions. rare combination.",
   "secretsAllFound": "all of them. there is nothing left to find here. there was never much, only a man and his machines.",
   "snakeStart": "it is yours. arrows move it. esc gives it back.",

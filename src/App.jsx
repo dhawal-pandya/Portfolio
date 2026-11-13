@@ -35,6 +35,14 @@ const App = () => {
 
   useEffect(() => startSunWatch(), []);
 
+  // The first time this browser saw the page; the terminal's `uptime` counts from it.
+  useEffect(() => {
+    try {
+      if (!localStorage.getItem("kc-first-seen"))
+        localStorage.setItem("kc-first-seen", String(Date.now()));
+    } catch {}
+  }, []);
+
   // For the ones who open the hood.
   useEffect(() => {
     console.log(

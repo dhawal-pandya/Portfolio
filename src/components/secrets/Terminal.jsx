@@ -135,6 +135,19 @@ const Terminal = ({ onKanban }) => {
         print("opening the board.");
         setOpen(false);
         break;
+      // never in help. the world has been running for you since you came.
+      case "uptime": {
+        let first = Date.now();
+        try {
+          first = Number(localStorage.getItem("kc-first-seen")) || first;
+        } catch {}
+        const mins = Math.floor((Date.now() - first) / 60000);
+        const days = Math.floor(mins / 1440);
+        const hm = `${Math.floor((mins % 1440) / 60)}:${String(mins % 60).padStart(2, "0")}`;
+        const turns = days === 0 ? T.uptime.none : days === 1 ? T.uptime.once : T.uptime.many.replace("{n}", days);
+        print(T.uptime.line.replace("{days}", `${days} day${days === 1 ? "" : "s"}`).replace("{hm}", hm).replace("{turns}", turns));
+        break;
+      }
       case "tathastu":
         foundSecret("tathastu");
         print(T.tathastu);

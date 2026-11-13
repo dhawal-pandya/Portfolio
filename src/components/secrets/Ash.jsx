@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import useCanvasLoop from "../../lib/useCanvasLoop";
+import { moonAge } from "../../lib/sun";
 
 // No words. Ash falls from a fire you never see. Stillness thickens the
 // fall; your hand is only wind. Clicks drop embers that land grey like
@@ -67,6 +68,7 @@ const Ash = () => {
     const load = () => {
       st.current.colors = {
         soft: cssColor("--ink-soft"),
+        ink: cssColor("--ink"),
         accent: cssColor("--accent"),
       };
     };
@@ -301,6 +303,7 @@ const Ash = () => {
 
     // Draw.
     ctx.clearRect(0, 0, w, h);
+    drawMoon(ctx, w, s.colors);
     ctx.fillStyle = s.colors.soft;
     ctx.globalAlpha = 0.65;
     ctx.beginPath();
@@ -341,6 +344,35 @@ const Ash = () => {
     </main>
   );
 };
+
+// Tonight's moon, in the corner, in cells. Its phase is the real one: the
+// lit side grows from the right while it waxes and leaves from the right as
+// it wanes, as seen from the north. The dark part stays faintly there, the
+// way a new moon still has a shape. Ash falls in front of it.
+const MOON_CELL = 4; // px per cell
+const MOON_R = 9; // radius, in cells
+let moon = { age: 0, at: 0 };
+function drawMoon(ctx, w, colors) {
+  if (Date.now() - moon.at > 60000) moon = { age: moonAge(), at: Date.now() };
+  const k = Math.cos(2 * Math.PI * moon.age);
+  const waxing = moon.age < 0.5;
+  const margin = w < 640 ? 28 : 56;
+  const cx = w - margin - MOON_R * MOON_CELL;
+  const cy = margin + MOON_R * MOON_CELL;
+  for (let j = -MOON_R; j < MOON_R; j++) {
+    for (let i = -MOON_R; i < MOON_R; i++) {
+      const nx = (i + 0.5) / MOON_R;
+      const ny = (j + 0.5) / MOON_R;
+      if (nx * nx + ny * ny > 1) continue;
+      const edge = Math.sqrt(1 - ny * ny) * k; // where the terminator crosses this row
+      const lit = waxing ? nx > edge : nx < -edge;
+      ctx.fillStyle = lit ? colors.ink : colors.soft;
+      ctx.globalAlpha = lit ? 0.75 : 0.12;
+      ctx.fillRect(cx + i * MOON_CELL, cy + j * MOON_CELL, MOON_CELL - 1, MOON_CELL - 1);
+    }
+  }
+  ctx.globalAlpha = 1;
+}
 
 // Resample an in-memory pile onto a new column count and height.
 function loadPileFrom(pile, cols, h) {

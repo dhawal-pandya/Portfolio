@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { setOverride, followSun, getOverride } from "../../lib/theme";
 import { quip } from "../../lib/quips";
+import { toggleCompany } from "../../lib/company";
 
 const LINKS = [
   { id: "about", label: "about" },
@@ -89,6 +90,10 @@ const Nav = () => {
             if (window.matchMedia("(pointer: coarse)").matches) {
               e.preventDefault();
               window.dispatchEvent(new CustomEvent("kc-terminal"));
+            } else {
+              // with a cursor, the wheel calls the fireflies and moths, or
+              // sends them off
+              toggleCompany();
             }
           }}
           className="grid h-9 w-9 place-items-center font-display text-base leading-none text-ink hover:text-accent"

@@ -20,6 +20,7 @@
   --accent: #c2540a;
   --line: #e0dacd;
   --sim: rgba(32, 32, 29, 0.07);
+  --moth: #4a4842;
   color-scheme: light;
 }
 
@@ -31,6 +32,7 @@
   --accent: #e8730f;
   --line: #1f2230;
   --sim: rgba(230, 228, 221, 0.07);
+  --moth: #5e5c57;
   color-scheme: dark;
 }
 

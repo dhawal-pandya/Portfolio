@@ -60,6 +60,13 @@
         } catch (e) {}
         if (t !== "day" && t !== "night") {
           var now = new Date();
+          // ?at=HH:MM previews another hour; mirrors now() in src/lib/sun.js
+          try {
+            var at = /^(\d{1,2}):(\d{2})$/.exec(
+              new URLSearchParams(location.search).get("at") || ""
+            );
+            if (at) now.setHours(+at[1], +at[2], 0, 0);
+          } catch (e) {}
           var start = Date.UTC(now.getUTCFullYear(), 0, 1);
           var doy = (now.getTime() - start) / 864e5;
           var decl =

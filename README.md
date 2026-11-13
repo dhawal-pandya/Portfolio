@@ -6,7 +6,7 @@ behind the projects, a snake plays itself behind the contact lines, and the
 poems are printed on paper that matches their nature.
 
 Built with React, Vite, and Tailwind. Design and architecture notes live in
-[DESIGN.md](DESIGN.md); read it before changing anything structural.
+[docs/DESIGN.md](docs/DESIGN.md); read it before changing anything structural.
 
 ## Develop
 
@@ -32,6 +32,7 @@ All copy and data live in `src/data/`:
 | `terminal.json` | everything the terminal says |
 
 `src/data/globe-points.json` is generated; regenerate with `npm run globe-data`.
+To preview another hour of the visitor's sky (fireflies, moths, theme), add `?at=HH:MM`, e.g. `?at=17:30` for dusk or `?at=22:00` for night.
 
 ## The quiet parts
 
