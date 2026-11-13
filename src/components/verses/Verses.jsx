@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import SectionHead from "../shared/SectionHead";
 import POEMS from "../../data/poems.json";
 import PROFILE from "../../data/profile.json";
-import { quip } from "../../lib/quips";
 
 // Each poem is a sheet of paper. The paper and the ink follow the nature of
 // the poem; see src/data/POEMS_README.md before adding one.
@@ -65,7 +64,6 @@ const Verses = () => {
   const poems = POEMS.filter(valid);
   const scroller = useRef(null);
   const [index, setIndex] = useState(0);
-  const endQuipped = useRef(false);
 
   useEffect(() => {
     const el = scroller.current;
@@ -73,10 +71,6 @@ const Verses = () => {
     const onScroll = () => {
       const i = Math.round((el.scrollLeft / (el.scrollWidth - el.clientWidth || 1)) * (poems.length - 1));
       setIndex(Math.min(Math.max(i, 0), poems.length - 1));
-      if (el.scrollLeft >= el.scrollWidth - el.clientWidth - 2 && !endQuipped.current) {
-        endQuipped.current = true;
-        quip("paper");
-      }
     };
     el.addEventListener("scroll", onScroll, { passive: true });
     return () => el.removeEventListener("scroll", onScroll);

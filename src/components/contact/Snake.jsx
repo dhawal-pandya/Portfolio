@@ -7,6 +7,7 @@ import { quip } from "../../lib/quips";
 
 const CELL = 20;
 const STEP = 0.13;
+const START_LEN = 16; // born long; a narrow board trims it to fit
 
 function colors() {
   const cs = getComputedStyle(document.documentElement);
@@ -34,9 +35,11 @@ const Snake = () => {
   const reset = (cols, rows) => {
     const s = st.current;
     const r = Math.floor(rows / 2);
-    s.snake = [[4, r], [3, r], [2, r]];
+    // laid out along the middle row, head to the right, tail at column 1
+    const len = Math.max(3, Math.min(START_LEN, cols - 3));
+    s.snake = Array.from({ length: len }, (_, i) => [len - i, r]);
     s.dir = [1, 0];
-    s.food = [Math.floor(cols * 0.7), r];
+    s.food = [Math.min(cols - 2, Math.max(len + 3, Math.floor(cols * 0.7))), r];
     s.dead = 0;
   };
 
@@ -65,7 +68,20 @@ const Snake = () => {
       s.dir = d;
     };
     const canvas = canvasRef.current;
-    const onClick = () => quip("snake");
+    // It only answers a touch on its own body. Links and buttons win: a
+    // click meant for them is never the snake's.
+    const onClick = (e) => {
+      if (e.target.closest?.("a, button, input, textarea, [role='button']")) return;
+      if (!canvas) return;
+      const rect = canvas.getBoundingClientRect();
+      const px = e.clientX - rect.left;
+      const py = e.clientY - rect.top;
+      // within a cell of a segment's centre; it moves ~8 cells a second
+      const hit = s.snake.some(
+        ([x, y]) => Math.hypot(px - (x + 0.5) * CELL, py - (y + 0.5) * CELL) < CELL
+      );
+      if (hit) quip("snake");
+    };
     window.addEventListener("kc-theme", onTheme);
     window.addEventListener("kc-snake-play", onPlay);
     window.addEventListener("keydown", onKey);

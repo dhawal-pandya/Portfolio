@@ -23,7 +23,7 @@ const About = () => {
   return (
     <section id="about" className="relative">
       <Chai />
-      <div className="relative z-10 mx-auto max-w-site px-5 py-24 md:px-8 md:py-32">
+      <div className="relative z-10 mx-auto max-w-site px-5 py-12 md:px-8 md:py-16">
       <SectionHead title="about" mark="परिचयः" />
       <div className="grid grid-cols-1 gap-10 md:grid-cols-[320px_1fr] md:gap-16">
         <div

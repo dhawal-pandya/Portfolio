@@ -108,17 +108,6 @@ const App = () => {
         quip("resize");
       }
     };
-    let hiddenAt = 0;
-    const onVis = () => {
-      if (document.hidden) hiddenAt = Date.now();
-      else if (hiddenAt && Date.now() - hiddenAt > 5 * 60 * 1000) quip("return");
-    };
-    let lastMove = Date.now();
-    const onActive = () => {
-      const now = Date.now();
-      if (now - lastMove > 5 * 60 * 1000 && !document.hidden) quip("idle");
-      lastMove = now;
-    };
     let clicks = [];
     const onClick = (e) => {
       if (e.target.closest?.("a, button, canvas, input, textarea, [role='button']")) return;
@@ -129,21 +118,14 @@ const App = () => {
         quip("click");
       }
     };
-    const onPrint = () => quip("print");
 
     document.addEventListener("copy", onCopy);
     window.addEventListener("resize", onResize);
-    document.addEventListener("visibilitychange", onVis);
-    window.addEventListener("pointermove", onActive);
     window.addEventListener("click", onClick);
-    window.addEventListener("beforeprint", onPrint);
     return () => {
       document.removeEventListener("copy", onCopy);
       window.removeEventListener("resize", onResize);
-      document.removeEventListener("visibilitychange", onVis);
-      window.removeEventListener("pointermove", onActive);
       window.removeEventListener("click", onClick);
-      window.removeEventListener("beforeprint", onPrint);
     };
   }, []);
 

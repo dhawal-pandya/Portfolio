@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "title": "Kolam",
+      "desc": "rice-flour threshold patterns, constructed from the rules of their tradition: sikku, kambi, pulli",
+      "tags": ["TypeScript", "generative", "SVG"],
+      "live": "https://dhawal-pandya.github.io/kolam/",
+      "code": "https://github.com/dhawal-pandya/kolam"
+    },
+    {
       "title": "Yantralok",
       "desc": "draw a system, add load, and watch the bottlenecks, queue overflows, and retry cascades show up on their own",
       "tags": ["TypeScript", "distributed systems", "simulation"],
@@ -43,12 +50,6 @@
       "desc": "curl, but mine",
       "tags": ["Golang"],
       "code": "https://github.com/dhawal-pandya/Murl"
-    },
-    {
-      "title": "Fynd",
-      "desc": "finds files faster than I find my keys",
-      "tags": ["Golang"],
-      "code": "https://github.com/dhawal-pandya/Fynd"
     },
     {
       "title": "Game of Life",

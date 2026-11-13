@@ -6,7 +6,7 @@ behind the projects, a snake plays itself behind the contact lines, and the
 poems are printed on paper that matches their nature.
 
 Built with React, Vite, and Tailwind. Design and architecture notes live in
-[REWRITE_PLAN.md](REWRITE_PLAN.md); read it before changing anything structural.
+[DESIGN.md](DESIGN.md); read it before changing anything structural.
 
 ## Develop
 

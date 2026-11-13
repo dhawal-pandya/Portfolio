@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import SectionHead from "../shared/SectionHead";
 import Snake from "./Snake";
 import PROFILE from "../../data/profile.json";
-import { quip } from "../../lib/quips";
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);
@@ -12,7 +11,6 @@ const Contact = () => {
       await navigator.clipboard.writeText(PROFILE.email);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
-      quip("contact");
     } catch {
       window.location.href = `mailto:${PROFILE.email}`;
     }

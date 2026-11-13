@@ -80,7 +80,11 @@ const Kanban = ({ open, onClose }) => {
     setBoard((b) => ({ ...b, [col]: b[col].filter((_, j) => j !== i) }));
 
   return (
-    <div className="fixed inset-0 z-[85] grid place-items-center bg-black/40 p-4" onClick={onClose}>
+    <div
+      className="fixed inset-0 z-[85] grid place-items-center p-4 backdrop-blur-sm"
+      style={{ background: "color-mix(in srgb, var(--bg) 70%, transparent)" }}
+      onClick={onClose}
+    >
       <div
         className="w-full max-w-3xl rounded border hairline bg-bg p-6 shadow-2xl"
         onClick={(e) => e.stopPropagation()}

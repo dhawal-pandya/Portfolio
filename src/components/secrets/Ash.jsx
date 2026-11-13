@@ -7,6 +7,15 @@ import useCanvasLoop from "../../lib/useCanvasLoop";
 // too tall the page breathes out once and begins again.
 
 const COL = 4; // px per pile column
+
+// How fast the room fills. Tune these by eye.
+const SPAWN = 5; // × flakes falling per second
+const SETTLE = 6; // × height each landed flake adds to the dune
+const RAMP = 45; // seconds of stillness to reach the heaviest fall
+const AIR = 3000; // most flakes aloft at once
+const SPREAD = [0.1, 0.2, 0.4, 0.2, 0.1]; // how a landing shares itself with neighbours
+const REPOSE = 2; // steepest step (px) between columns before the dune slumps
+
 const PILE_KEY = "kc-ash-pile";
 const CYCLE_KEY = "kc-ash-cycles";
 
@@ -157,11 +166,11 @@ const Ash = () => {
     // heavier it gets, up to a ceiling. Motion knocks it back down.
     const calm = 1 - Math.min(1, s.activity / 800);
     const idle = (Date.now() - s.lastInput) / 1000;
-    const ramp = Math.min(1, idle / 120); // two still minutes reach the ceiling
-    const rate = 1.5 + calm * (6 + 30 * ramp * ramp);
+    const ramp = Math.min(1, idle / RAMP);
+    const rate = (1.5 + calm * (6 + 30 * ramp * ramp)) * SPAWN;
 
     s.spawnAcc += rate * dt;
-    if (s.flakes.length > 700) s.spawnAcc = 0; // the air holds only so much
+    if (s.flakes.length > AIR) s.spawnAcc = 0; // the air holds only so much
     while (s.spawnAcc >= 1) {
       s.spawnAcc -= 1;
       s.flakes.push({
@@ -234,7 +243,13 @@ const Ash = () => {
       // settle
       const c = Math.max(0, Math.min(cols - 1, Math.floor(f.x / COL)));
       if (f.y >= h - s.pile[c] - f.r) {
-        s.pile[c] = Math.min(s.pile[c] + 0.55 + f.r * 0.2, h);
+        // a landing spreads a little sideways, so a heavy fall stays a dune
+        // and not a comb
+        const add = (0.55 + f.r * 0.2) * SETTLE;
+        for (let k = -2; k <= 2; k++) {
+          const cc = c + k;
+          if (cc >= 0 && cc < cols) s.pile[cc] = Math.min(s.pile[cc] + add * SPREAD[k + 2], h);
+        }
         continue;
       }
       if (f.y < h + 20) next.push(f);
@@ -242,13 +257,13 @@ const Ash = () => {
     s.flakes = next;
 
     // The dune relaxes; ash holds no edges for long.
-    for (let pass = 0; pass < 2; pass++) {
+    for (let pass = 0; pass < 3; pass++) {
       for (let c = 0; c < cols - 1; c++) {
         const diff = s.pile[c] - s.pile[c + 1];
-        if (diff > 5) {
+        if (diff > REPOSE) {
           s.pile[c] -= 0.5;
           s.pile[c + 1] += 0.5;
-        } else if (diff < -5) {
+        } else if (diff < -REPOSE) {
           s.pile[c] += 0.5;
           s.pile[c + 1] -= 0.5;
         }
